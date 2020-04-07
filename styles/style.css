@@ -1,0 +1,48 @@
+body{
+    /* padding-top: 130px; */
+}
+.navbar-dark .navbar-brand {
+    color: #FD2;
+}
+li {
+    float: left;
+  }
+  
+  a {
+    display: block;
+    padding: 8px;
+    /* background-color: #dddddd; */
+  }
+.jumbotron {
+    margin-left: auto;
+    margin-right: auto;
+}
+.card {
+    margin-bottom: 30px;
+    text-align: center;
+    height: 25rem;
+    margin-left: auto;
+    margin-right: auto;
+}
+.card .card-icon {
+    text-align: center;
+}
+.card img {
+    display: block;
+    width: 100px;
+    height: 80px;
+    object-fit: contain;
+    margin: 40px auto 40px auto;
+}
+.card-title {
+    height: 50px;
+}
+p.card-text {
+    height: 70px;
+    margin-bottom: 2rem;
+}
+.btn-primary {
+    width: 10rem;
+    /* position: sticky; */
+    /* right: 100px; */
+}
