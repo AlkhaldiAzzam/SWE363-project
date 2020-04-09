@@ -1,4 +1,6 @@
-export default function buildDashboeard(){
+import buildProfile from "./profile-page.js";
+
+export default function buildDashboard(){
     console.log($("body"))
     $("#navbar").next().remove();
     $("#navbar").after(`
@@ -14,7 +16,7 @@ export default function buildDashboeard(){
                         <div class="card-body">
                           <h5 class="card-title">Update Profile</h5>
                           <p class="card-text">Change your account username , password and medical information.</p>
-                          <a href="#" class="btn btn-primary">Update</a>
+                          <button id="pro-page" class="btn btn-primary">Update</button>
                         </div>
                       </div>
                 </div>
@@ -84,4 +86,6 @@ export default function buildDashboeard(){
         </div>
     </div>
     `);
+
+    $("#pro-page").click(()=> buildProfile())
 }
