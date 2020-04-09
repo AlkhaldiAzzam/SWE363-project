@@ -1,3 +1,4 @@
+import buildSignup from "./signup.js";
 
 
 export default function buildLogin(){
@@ -47,13 +48,15 @@ export default function buildLogin(){
                         Create an account?
                     </span>
 
-                    <a href="#" class="txt2 hov1">
+                    <button class="txt2 hov1" id="signup">
                         Sign up
-                    </a>
+                    </button>
                 </div>
             </form>
         </div>
     </div>
 </div>
     `)
+
+    $("#signup").click(()=> buildSignup())
 }
