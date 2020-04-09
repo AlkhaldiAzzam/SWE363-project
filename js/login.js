@@ -4,7 +4,7 @@ export default function buildLogin(){
     $("#navbar").next().remove();
 
 
-    $("body").append(`
+    $("#navbar").after(`
     
 	<div class="limiter">
     <div class="container-login100">
