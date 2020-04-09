@@ -1,7 +1,7 @@
 export default function buildDashboeard(){
     console.log($("body"))
     $("#navbar").next().remove();
-    $('body').append(`
+    $("#navbar").after(`
 
     <div class="container">
         <div class="jumbotron">

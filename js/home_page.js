@@ -3,7 +3,7 @@ export default function buildHomePAge(){
     $("#navbar").next().remove();
 
 
-    $("body").append(`
+    $("#navbar").after(`
     <div class="container-fluid" style="padding: 0px ;">
     
       <div class="jumbotron">
