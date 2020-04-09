@@ -1,5 +1,5 @@
 
-export default function buildHomePAge(){
+export default function buildHomePage(){
     $("#navbar").next().remove();
 
 
