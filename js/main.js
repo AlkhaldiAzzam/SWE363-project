@@ -22,7 +22,7 @@ $("#profileBtn").click(()=> buildProfile())
 
 // buildDashboard()
 // buildHomePage()
-// buildLogin()
+    buildLogin()
 // buildSignup()
 // buildProfile()
 // buildStaffList()
