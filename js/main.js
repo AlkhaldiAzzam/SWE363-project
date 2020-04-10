@@ -3,11 +3,20 @@ import buildHomePage from "./home_page.js"
 import buildLogin from "./login.js";
 import buildSignup from "./signup.js";
 import buildProfile from "./profile-page.js";
+import buildStaffList from "./staff-list.js";
+// import staff from '../dummy/dummy-staff.js'
+
 
 $("#homeNavBtn").click(()=> buildHomePage())
 $("#loginNavBtn").click(()=> buildLogin())
 $("#signupNavBtn").click(()=> buildSignup())
 $("#aboutUsNavBtn").click(()=> buildAboutUsPage())
+
+$("#dashBtn").click(()=> buildDashboard())
+$("#staffBtn").click(()=> buildStaffList())
+$("#profileBtn").click(()=> buildProfile())
+
+
 
 
 
@@ -15,4 +24,5 @@ $("#aboutUsNavBtn").click(()=> buildAboutUsPage())
 // buildHomePage()
 // buildLogin()
 // buildSignup()
-buildProfile()
+// buildProfile()
+// buildStaffList()
