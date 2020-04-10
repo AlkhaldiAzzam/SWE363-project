@@ -7,11 +7,12 @@ import buildProfile from "./profile-page.js";
 $("#homeNavBtn").click(()=> buildHomePage())
 $("#loginNavBtn").click(()=> buildLogin())
 $("#signupNavBtn").click(()=> buildSignup())
+$("#aboutUsNavBtn").click(()=> buildAboutUsPage())
 
 
 
 // buildDashboard()
-buildHomePage()
+// buildHomePage()
 // buildLogin()
 // buildSignup()
-// buildProfile()
+buildProfile()
