@@ -13,7 +13,7 @@ export default function buildHomePage(){
           <h1>Services</h1>
           <div class="row">
             <div class="col-sm-3">
-              <img src="../images/coronavirus.png" alt="covid" width="100%" />
+              <img src="images/coronavirus.png" alt="covid" width="100%" />
               <svg
                 style="display: inline-display;"
                 class="bi bi-check-all"
