@@ -55,10 +55,6 @@ p.card-text {
 /*//////////////////////////////////////////////////////////////////
 [ FONT ]*/
 
-@font-face {
-    font-family: OpenSans-Regular;
-    src: url('../fonts/OpenSans/OpenSans-Regular.ttf'); 
-  }
   
   
   
@@ -73,12 +69,12 @@ p.card-text {
   
   body, html {
       height: 100%;
-      font-family: OpenSans-Regular, sans-serif;
+       
   }
   
   /*---------------------------------------------*/
   a {
-      font-family: OpenSans-Regular;
+      
       font-size: 14px;
       line-height: 1.7;
       color: #666666;
@@ -100,10 +96,11 @@ p.card-text {
   /*---------------------------------------------*/
   h1,h2,h3,h4,h5,h6 {
       margin: 0px;
+      text-transform: capitalize;
   }
   
   p {
-      font-family: OpenSans-Regular;
+      
       font-size: 14px;
       line-height: 1.7;
       color: #666666;
@@ -159,14 +156,14 @@ p.card-text {
   /*//////////////////////////////////////////////////////////////////
   [ Utility ]*/
   .txt1 {
-    font-family: OpenSans-Regular;
+    
     font-size: 15px;
     line-height: 1.4;
     color: #999999;
   }
   
   .txt2 {
-    font-family: OpenSans-Regular;
+    
     font-size: 15px;
     line-height: 1.4;
     color: #4272d7;
@@ -223,7 +220,7 @@ p.card-text {
   
   .login100-form-title {
     display: block;
-    font-family: OpenSans-Regular;
+    
     font-size: 30px;
     color: #555555;
     line-height: 1.2;
@@ -248,7 +245,7 @@ p.card-text {
     display: block;
     width: 100%;
     background: transparent;
-    font-family: OpenSans-Regular;
+    
     font-size: 15px;
     color: #666666;
     line-height: 1.2;
@@ -382,7 +379,7 @@ p.card-text {
     height: 60px;
     background-color: #4272d7;
   
-    font-family: OpenSans-Regular;
+    
     font-size: 14px;
     color: #fff;
     line-height: 1.2;
@@ -423,7 +420,7 @@ p.card-text {
     right: 12px;
     pointer-events: none;
   
-    font-family: OpenSans-Regular;
+    
     color: #c80000;
     font-size: 13px;
     line-height: 1.4;
@@ -440,8 +437,7 @@ p.card-text {
   
   .alert-validate::after {
     content: "\f12a";
-    font-family: FontAwesome;
-    display: block;
+    isplay: block;
     position: absolute;
     color: #c80000;
     font-size: 16px;
