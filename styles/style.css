@@ -173,6 +173,10 @@ p.card-text {
     text-decoration: underline;
   }
   
+  .brd{
+    border-top: 1px solid black;
+    /* border-radius: 4px; */
+  }
   
   /*//////////////////////////////////////////////////////////////////
   [ login ]*/
@@ -467,6 +471,6 @@ p.card-text {
     background: #e9faff;
     height: 100%;
     width: 100%;
-    border: 2px solid #333333;
+    border: 1px solid #333333;
   }
   

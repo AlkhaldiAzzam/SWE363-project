@@ -21,7 +21,7 @@ export default function buildStaffList(){
 
 
 
-    <div class="container-fluid w-75">
+    <div class="container-fluid w-75 h-100">
 
 
       <div class="m-5">
