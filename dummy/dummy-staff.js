@@ -16,9 +16,9 @@
         role: "Surgeon"
     },
     {
-        name: "Azzam Alkhaldi",
+        name: "Ahmed Alzahrani",
         id: 22739814263,
-        role: "Surgeon"
+        role: "Neuro-Surgeon"
     },
     {
         name: "Azzam Alkhaldi",

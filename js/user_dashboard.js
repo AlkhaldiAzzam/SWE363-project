@@ -2,8 +2,10 @@ import buildProfile from "./profile-page.js";
 
 export default function buildDashboard(){
     console.log($("body"))
-    $("#navbar").next().remove();
-    $("#navbar").after(`
+    $(".main").empty();
+
+
+    $(".main").append(`
 
     <div class="container">
         <div class="jumbotron">
