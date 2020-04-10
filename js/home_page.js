@@ -1,12 +1,12 @@
 
 export default function buildHomePage(){
-    $("#navbar").next().remove();
+    $(".main").empty();
 
 
-    $("#navbar").after(`
+    $(".main").append(`
    
 
-      <div class="container-fluid m-4">
+    <div class="container-fluid m-4">
 
     <div class="container-fluid">
         <div class="jumbotron">
@@ -15,6 +15,7 @@ export default function buildHomePage(){
             <div class="col-sm-3">
               <img src="../images/coronavirus.png" alt="covid" width="100%" />
               <svg
+                style="display: inline-display;"
                 class="bi bi-check-all"
                 width="2em"
                 height="2em"
@@ -31,7 +32,7 @@ export default function buildHomePage(){
                   d="M6.25 8.043l-.896-.897a.5.5 0 10-.708.708l.897.896.707-.707zm1 2.414l.896.897a.5.5 0 00.708 0l7-7a.5.5 0 00-.708-.708L8.5 10.293l-.543-.543-.707.707z"
                 />
               </svg>
-              <a href="test.html" style="font-size: 2em;">Test for COVID-19</a>
+              <a style="display: inline; font-size: 1.5rem;" href="test.html" >Test for COVID-19</a>
             </div>
   
             <div class="col-sm-3">
@@ -67,7 +68,7 @@ export default function buildHomePage(){
       </div>
       <!-- news -->
       <div class="container-fluid">
-        <h2 class="m-3">news</h4>
+        <h2>news</h4>
         <div class="row">
           <div class="col-sm-3">
             <p>

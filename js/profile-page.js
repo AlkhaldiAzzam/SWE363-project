@@ -2,10 +2,10 @@
 
 export default function buildProfile(){
 
-    $("#navbar").next().remove();
+    $(".main").empty();
 
 
-    $("#navbar").after(`
+    $(".main").append(`
     <div class="blue-back">
 
     <div class="container-fluid w-75 ">

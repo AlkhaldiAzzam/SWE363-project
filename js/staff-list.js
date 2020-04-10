@@ -2,8 +2,7 @@ import staff from '../dummy/dummy-staff.js'
 
 
 export default function buildStaffList(){
-    $("#navbar").next().remove();
-
+    
     let tList = []
     staff.forEach(e=>{
         tList.push(`<tr>
@@ -11,13 +10,15 @@ export default function buildStaffList(){
         <td>${e.id}</td>
         <td>${e.role}</td>
         <td><button class=""> <i class="fas fa-pencil-alt"></i> </button></td>
-      </tr>`)
+        </tr>`)
     })
-
-
+    
+    
+    $(".main").empty();
     
 
-    $("#navbar").after(`
+    $(".main").append(`
+
 
 
     <div class="container-fluid w-75">

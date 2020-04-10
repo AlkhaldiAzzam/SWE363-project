@@ -1,10 +1,10 @@
 
 
 export default function buildAboutUs(){
-    $("#navbar").next().remove();
+    $(".main").empty();
+    
 
-
-    $("#navbar").after(`
+    $(".main").append(`
     <div class="container-fluid m-4">
 
         

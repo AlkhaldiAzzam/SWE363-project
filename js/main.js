@@ -5,6 +5,7 @@ import buildSignup from "./signup.js";
 import buildProfile from "./profile-page.js";
 import buildStaffList from "./staff-list.js";
 import buildAboutUs from "./aboutUs.js";
+import buildPageUnderCons from "./pageUnderCons.js";
 // import staff from '../dummy/dummy-staff.js'
 
 
@@ -21,7 +22,7 @@ $("#profileBtn").click(()=> buildProfile())
 
 
 
-
+// buildPageUnderCons()
 buildHomePage()
 // buildDashboard()
 // buildLogin()
