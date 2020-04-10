@@ -7,7 +7,8 @@ export default function buildAboutUs(){
     $("#navbar").after(`
     <div class="container-fluid m-4">
 
-
+        
+      
     <div class="container">
       <div class="jumbotron">
           <h3 style="font-weight: 700;"><span class="fa fa-stethoscope"></span> About Health Stats</h3>
@@ -21,28 +22,31 @@ export default function buildAboutUs(){
     <div class="container">
       <div class="jumbotron">
           <div class="row">
-              <div class="col-lg-4 colmd-6 col-sm-12">
-                  <div class="card" style="width: 18rem;">
-                      <div class="card-body">
-                        <h5 class="card-title"><span class="fas fa-user-md"></span>HS Medical staff</h5>
-                        <p class="card-text">choeck out HS members who provide different services and as well as they help with your questions.</p>
-                        <a href="#" class="btn btn-primary">HS Medical Staff</a>
-                      </div>
-                    </div>
-              </div>
-              <div class="col-lg-4 colmd-6 col-sm-12">
+              <div class="col-lg-4 col-md-6 col-sm-12">
                   <div class="card" style="width: 18rem;">
                       <div class="card-icon">
-                          <img src="../images/Search-Services.png" class="card-img-top" alt="Browse Available Services">
+                          <img src="../images/1197137-200.png" class="card-img-top" alt="Browse Available Services">
                       </div>
                       <div class="card-body">
-                        <h5 class="card-title">Browse Available Services</h5>
-                        <p class="card-text">Browse services and features helps to be more healthy.</p>
-                        <a href="#" class="btn btn-primary">Browse</a>
+                        <h5 class="card-title">HS Medical staff</h5>
+                        <p class="card-text">check out our team of experts in medical field who are looking forward to serve you and provide you with the neede information you need.</p>
+                        <a href="#" class="btn btn-primary">HS Staff Members</a>
                       </div>
                     </div>
               </div>
-              <div class="col-lg-4 colmd-6 col-sm-12">
+              <div class="col-lg-4 col-md-6 col-sm-12">
+                  <div class="card" style="width: 18rem;">
+                      <div class="card-icon">
+                          <img src="../images/stats.png" class="card-img-top" alt="Browse Available Services">
+                      </div>
+                      <div class="card-body">
+                        <h5 class="card-title">Latest Stats</h5>
+                        <p class="card-text">See the latest stats about infections, pandemics and world population.</p>
+                        <a href="#" class="btn btn-primary">Open Stats</a>
+                      </div>
+                    </div>
+              </div>
+              <div class="col-lg-4 col-md-6 col-sm-12">
                   <div class="card" style="width: 18rem;">
                       <div class="card-icon">
                           <img src="../images/Search-Services.png" class="card-img-top" alt="Browse Available Services">
@@ -57,5 +61,5 @@ export default function buildAboutUs(){
             </div>
       </div>
     </div>
-  </div>`)
+    </div>`)
 }
