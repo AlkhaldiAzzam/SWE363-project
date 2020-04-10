@@ -10,6 +10,7 @@ import buildStaffList from "./staff-list.js";
 $("#homeNavBtn").click(()=> buildHomePage())
 $("#loginNavBtn").click(()=> buildLogin())
 $("#signupNavBtn").click(()=> buildSignup())
+$("#aboutUsNavBtn").click(()=> buildAboutUsPage())
 
 $("#dashBtn").click(()=> buildDashboard())
 $("#staffBtn").click(()=> buildStaffList())
@@ -20,7 +21,7 @@ $("#profileBtn").click(()=> buildProfile())
 
 
 // buildDashboard()
-buildHomePage()
+// buildHomePage()
 // buildLogin()
 // buildSignup()
 // buildProfile()
