@@ -1,4 +1,5 @@
 import buildProfile from "./profile-page.js";
+import buildPageUnderCons from "./pageUnderCons.js";
 
 export default function buildDashboard(){
     console.log($("body"))
@@ -30,7 +31,7 @@ export default function buildDashboard(){
                         <div class="card-body">
                           <h5 class="card-title">Browse Available Services</h5>
                           <p class="card-text">Browse services and features helps to be more healthy.</p>
-                          <a href="#" class="btn btn-primary">Browse</a>
+                          <button  class="btn btn-primary underCons">Browse</button>
                         </div>
                       </div>
                 </div>
@@ -42,7 +43,7 @@ export default function buildDashboard(){
                         <div class="card-body">
                           <h5 class="card-title">Request a Service</h5>
                           <p class="card-text">many services has been created for you to stay healthy and safe.</p>
-                          <a href="#" class="btn btn-primary">Request</a>
+                          <button  class="btn btn-primary underCons">Request</button>
                         </div>
                       </div>
                 </div>
@@ -56,7 +57,7 @@ export default function buildDashboard(){
                         <div class="card-body">
                           <h5 class="card-title">Track the Status of Sent Request</h5>
                           <p class="card-text">Check latest updates on your requests.</p>
-                          <a href="#" class="btn btn-primary">Go</a>
+                          <button  class="btn btn-primary underCons">Go</button>
                         </div>
                       </div>
                 </div>
@@ -68,7 +69,7 @@ export default function buildDashboard(){
                         <div class="card-body">
                           <h5 class="card-title">Cancel a Request</h5>
                           <p class="card-text">Cancel any requests for services any time.</p>
-                          <a href="#" class="btn btn-primary">Requsts Menu</a>
+                          <button  class="btn btn-primary underCons">Requsts Menu</button>
                         </div>
                       </div>
                 </div>
@@ -80,7 +81,7 @@ export default function buildDashboard(){
                         <div class="card-body">
                           <h5 class="card-title">Feedback</h5>
                           <p class="card-text">Some quick feedback can be helpful for us to provide better serivces and high quality content.</p>
-                          <a href="#" class="btn btn-primary">Write feedback</a>
+                          <button  class="btn btn-primary underCons">Write feedback</button>
                         </div>
                       </div>
                 </div>
@@ -90,4 +91,6 @@ export default function buildDashboard(){
     `);
 
     $("#pro-page").click(()=> buildProfile())
+    $(".underCons").click(()=> buildPageUnderCons())
+
 }
