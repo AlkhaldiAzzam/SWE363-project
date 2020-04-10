@@ -2,10 +2,10 @@ import buildSignup from "./signup.js";
 
 
 export default function buildLogin(){
-    $("#navbar").next().remove();
+    $(".main").empty();
 
 
-    $("#navbar").after(`
+    $(".main").append(`
     
 	<div class="limiter">
     <div class="container-login100">
