@@ -41,9 +41,9 @@ export default function buildDashboard(){
                             <img src="images/Medical-Service.webp" class="card-img-top" alt="Request Medical Services">
                         </div>
                         <div class="card-body">
-                          <h5 class="card-title">Request a Service</h5>
-                          <p class="card-text">many services has been created for you to stay healthy and safe.</p>
-                          <button  class="btn btn-primary underCons">Request</button>
+                          <h5 class="card-title">Post a Question</h5>
+                          <p class="card-text">Ask any Question that comes to your mind that related to a health matter.</p>
+                          <button  class="btn btn-primary underCons">Ask</button>
                         </div>
                       </div>
                 </div>
