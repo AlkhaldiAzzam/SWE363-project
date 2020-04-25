@@ -117,7 +117,7 @@ $("#homeNavBtn").click(()=> buildHomePage())
 $("#loginNavBtn").click(()=> buildLogin())
 $("#signupNavBtn").click(()=> buildSignup())
 $("#aboutUsNavBtn").click(()=> buildAboutUs())
-
+$("#testBtn").click(()=> buildTestPage())
 
 $("#dashBtn").click(()=> buildDashboard())
 $("#staffBtn").click(()=> buildStaffList())
