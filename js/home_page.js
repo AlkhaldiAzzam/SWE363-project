@@ -1,3 +1,4 @@
+import buildTestPage from "./test_page.js";
 
 export default function buildHomePage(){
     $(".main").empty();
@@ -131,4 +132,6 @@ export default function buildHomePage(){
       </div>  
         </div>
     `)
+    
+    $("#testBtn").click(()=> buildTestPage())
 }
