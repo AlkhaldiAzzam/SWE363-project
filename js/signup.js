@@ -1,4 +1,7 @@
 import buildLogin from "./login.js";
+import buildHomePage from "./home_page.js";
+import buildFooter from "../footer.js";
+import buildHeader from "./header.js";
 
 
 export default function buildSignup(){
@@ -9,43 +12,43 @@ export default function buildSignup(){
 	<div class="limiter">
     <div class="container-login100">
         <div class="wrap-login100 p-l-55 p-r-55 p-t-65 p-b-50">
-            <form class="login100-form validate-form">
+            <form class="login100-form validate-form" >
                 <span class="login100-form-title p-b-33">
                     New Account 
                 </span>
 
                 <div class="wrap-input100 validate-input m-3" >
-                    <input class="input100" type="text" name="fName" placeholder="First Name">
+                    <input class="input100" type="text" name="fName" id="fName" placeholder="First Name">
                     <span class="focus-input100-1"></span>
                     <span class="focus-input100-2"></span>
                 </div>
 
                 <div class="wrap-input100 validate-input m-3" >
-                  <input class="input100" type="text" name="lName" placeholder="Last Name">
+                  <input class="input100" id="lName" type="text" name="lName" placeholder="Last Name">
                   <span class="focus-input100-1"></span>
                   <span class="focus-input100-2"></span>
               </div>
             <div class="wrap-input100 validate-input m-3" data-validate = "Valid email is required: ex@abc.xyz">
-              <input class="input100" type="text" name="email" placeholder="Email">
+              <input class="input100" id="email" type="text" name="email" placeholder="Email">
               <span class="focus-input100-1"></span>
               <span class="focus-input100-2"></span>
           </div>
 
                 <div class="wrap-input100 rs1 validate-input m-3" data-validate="Password is required">
-                    <input class="input100" type="password" name="pass" placeholder="Password">
+                    <input class="input100" id="pass" type="password" name="pass" placeholder="Password">
                     <span class="focus-input100-1"></span>
                     <span class="focus-input100-2"></span>
                 </div>
 
                 <div class="wrap-input100 rs1 validate-input m-3" data-validate="Password is required">
-                  <input class="input100" type="password" name="rePass" placeholder="Repeat Password">
+                  <input class="input100" id="repass" type="password" name="rePass" placeholder="Repeat Password">
                   <span class="focus-input100-1"></span>
                   <span class="focus-input100-2"></span>
               </div>
 
                 <div class="container-login100-form-btn m-t-20">
-                    <button class="login100-form-btn">
-                        Sign in
+                    <button id="signup" class="login100-form-btn">
+                        Sign up
                     </button>
                 </div>
 
@@ -66,6 +69,34 @@ export default function buildSignup(){
 </div>`)
 
 $("#login").click(()=> buildLogin())
+
+$("#signup").click((e)=>{
+    e.preventDefault();
+
+    console.log('hhhhh')
+    const data = {
+        first_name: $("#fName").val(),
+        last_name: $("#lName").val(),
+        email: $("#email").val(),
+        password: $("#pass").val(),
+        password_confirmation: $("#rePass").val(),
+        u_id: "1234567890",
+        type: "Normal User"
+
+
+    }
+
+    const url = "http://localhost:3000/signup"
+
+    axios.post(url, data).then(res=>{
+        console.log(res)
+        buildHeader(res.data.user_data)
+        buildHomePage()
+        
+    }).catch(err=> console.log(err))
+
+
+})
 
 }
 
