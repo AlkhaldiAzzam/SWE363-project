@@ -6,24 +6,26 @@ import buildProfile from "./profile-page.js";
 import buildStaffList from "./staff-list.js";
 import buildAboutUs from "./aboutUs.js";
 import buildPageUnderCons from "./pageUnderCons.js";
-import buildQuestionsPage from "./QuestionsPage.js";
+
+
+import buildHeader from './header.js'
+import buildFooter from "../footer.js";
+
+import buildTestPage from "./test_page.js"; // <----------------------------------- here
+
 // import staff from '../dummy/dummy-staff.js'
 
 
-$("#homeNavBtn").click(()=> buildHomePage())
-$("#loginNavBtn").click(()=> buildLogin())
-$("#signupNavBtn").click(()=> buildSignup())
-$("#aboutUsNavBtn").click(()=> buildAboutUs())
+// const axios = require('axios').default;
 
 
-$("#dashBtn").click(()=> buildDashboard())
-$("#staffBtn").click(()=> buildStaffList())
-$("#profileBtn").click(()=> buildProfile())
-$("#QuestionsBtn").click(()=> buildQuestionsPage())
 
 
 // buildPageUnderCons()
+buildHeader()
 buildHomePage()
+
+buildFooter()
 // buildDashboard()
 // buildLogin()
 // buildSignup()
