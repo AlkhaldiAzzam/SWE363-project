@@ -1,5 +1,6 @@
 import buildSignup from "./signup.js";
-
+import buildHeader from './header.js';
+import buildHomePage from './home_page.js'
 
 export default function buildLogin(){
     $(".main").empty();
@@ -16,19 +17,19 @@ export default function buildLogin(){
                 </span>
 
                 <div class="wrap-input100 validate-input" data-validate = "Valid email is required: ex@abc.xyz">
-                    <input class="input100" type="text" name="email" placeholder="Email">
+                    <input class="input100" id="email" type="text" name="email" placeholder="Email">
                     <span class="focus-input100-1"></span>
                     <span class="focus-input100-2"></span>
                 </div>
 
                 <div class="wrap-input100 rs1 validate-input" data-validate="Password is required">
-                    <input class="input100" type="password" name="pass" placeholder="Password">
+                    <input class="input100" id="pass" type="password" name="pass" placeholder="Password">
                     <span class="focus-input100-1"></span>
                     <span class="focus-input100-2"></span>
                 </div>
 
                 <div class="container-login100-form-btn m-t-20">
-                    <button class="login100-form-btn">
+                    <button id="login" class="login100-form-btn">
                         Sign in
                     </button>
                 </div>
@@ -59,4 +60,29 @@ export default function buildLogin(){
     `)
 
     $("#signup").click(()=> buildSignup())
+
+    $("#login").click((e)=>{
+        e.preventDefault();
+    
+        console.log('hhhhh')
+        const data = {
+         
+            email: $("#email").val(),
+            password: $("#pass").val(),
+    
+    
+        }
+    
+        const url = "http://localhost:3000/auth/login"
+    
+        axios.post(url, data).then(res=>{
+            console.log(res)
+            buildHeader(res.data.user_data)
+            buildHomePage()
+            
+        }).catch(err=> console.log(err))
+    
+    
+    })
+    
 }
