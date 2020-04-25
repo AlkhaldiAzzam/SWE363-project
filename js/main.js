@@ -6,12 +6,16 @@ import buildProfile from "./profile-page.js";
 import buildStaffList from "./staff-list.js";
 import buildAboutUs from "./aboutUs.js";
 import buildPageUnderCons from "./pageUnderCons.js";
+
 import buildHeader from './header.js'
 import buildFooter from "../footer.js";
+
+import buildTestPage from "./test_page.js"; // <----------------------------------- here
 // import staff from '../dummy/dummy-staff.js'
 
 
 // const axios = require('axios').default;
+
 
 
 
@@ -28,3 +32,4 @@ buildFooter()
 // buildProfile()
 // buildStaffList()
 // buildAboutUs()
+// buildTestPage()
