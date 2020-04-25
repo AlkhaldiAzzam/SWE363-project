@@ -1,5 +1,7 @@
 import buildProfile from "./profile-page.js";
 import buildPageUnderCons from "./pageUnderCons.js";
+import buildFeedbackPage from "./feedback_page.js";
+import buildPostQuestionPage from "./QuestionPostPage.js";
 
 export default function buildDashboard(){
     console.log($("body"))
@@ -43,7 +45,7 @@ export default function buildDashboard(){
                         <div class="card-body">
                           <h5 class="card-title">Post a Question</h5>
                           <p class="card-text">Ask any Question that comes to your mind that related to a health matter.</p>
-                          <button  class="btn btn-primary underCons">Ask</button>
+                          <button  class="btn btn-primary" id="PostQuestionBtn">Ask</button>
                         </div>
                       </div>
                 </div>
@@ -81,7 +83,7 @@ export default function buildDashboard(){
                         <div class="card-body">
                           <h5 class="card-title">Feedback</h5>
                           <p class="card-text">Some quick feedback can be helpful for us to provide better serivces and high quality content.</p>
-                          <button  class="btn btn-primary underCons">Write feedback</button>
+                          <button  class="btn btn-primary" id="feedbackBtn">Write feedback</button>
                         </div>
                       </div>
                 </div>
@@ -91,6 +93,8 @@ export default function buildDashboard(){
     `);
 
     $("#pro-page").click(()=> buildProfile())
+    $("#feedbackBtn").click(()=> buildFeedbackPage())
     $(".underCons").click(()=> buildPageUnderCons())
+    $("#PostQuestionBtn").click(()=> buildPostQuestionPage())
 
 }
