@@ -6,6 +6,7 @@ import buildProfile from "./profile-page.js";
 import buildStaffList from "./staff-list.js";
 import buildAboutUs from "./aboutUs.js";
 import buildPageUnderCons from "./pageUnderCons.js";
+import buildTestPage from "./test_page.js"; // <----------------------------------- here
 // import staff from '../dummy/dummy-staff.js'
 
 
@@ -18,6 +19,7 @@ $("#aboutUsNavBtn").click(()=> buildAboutUs())
 $("#dashBtn").click(()=> buildDashboard())
 $("#staffBtn").click(()=> buildStaffList())
 $("#profileBtn").click(()=> buildProfile())
+$("#testBtn").click(()=> buildTestPage()) // <------------------------------------- here
 
 
 
@@ -30,3 +32,4 @@ buildHomePage()
 // buildProfile()
 // buildStaffList()
 // buildAboutUs()
+// buildTestPage()
