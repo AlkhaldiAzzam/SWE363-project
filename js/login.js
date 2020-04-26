@@ -1,6 +1,7 @@
 import buildSignup from "./signup.js";
 import buildHeader from './header.js';
 import buildHomePage from './home_page.js'
+import { userController } from "./main.js";
 
 export default function buildLogin(){
     $(".main").empty();
@@ -11,6 +12,9 @@ export default function buildLogin(){
 	<div class="limiter">
     <div class="container-login100">
         <div class="wrap-login100 p-l-55 p-r-55 p-t-65 p-b-50">
+            <div class="alert alert-danger d-none" id="alert" role="alert">
+                 Please check your credintials!
+            </div>
             <form class="login100-form validate-form">
                 <span class="login100-form-title p-b-33">
                     Account Login
@@ -79,8 +83,12 @@ export default function buildLogin(){
             console.log(res)
             buildHeader(res.data.user_data)
             buildHomePage()
+            userController(res.data.user_data, res.data.auth_token)
             
-        }).catch(err=> console.log(err))
+        }).catch(err=> {
+            console.log(err)
+            $("#alert").removeClass("d-none")
+        })
     
     
     })

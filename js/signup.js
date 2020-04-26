@@ -2,6 +2,7 @@ import buildLogin from "./login.js";
 import buildHomePage from "./home_page.js";
 import buildFooter from "../footer.js";
 import buildHeader from "./header.js";
+import { userController } from "./main.js";
 
 
 export default function buildSignup(){
@@ -12,6 +13,9 @@ export default function buildSignup(){
 	<div class="limiter">
     <div class="container-login100">
         <div class="wrap-login100 p-l-55 p-r-55 p-t-65 p-b-50">
+        <div class="alert alert-danger d-none" id="alert" role="alert">
+                 Please check your passwords!
+            </div>
             <form class="login100-form validate-form" >
                 <span class="login100-form-title p-b-33">
                     New Account 
@@ -41,7 +45,7 @@ export default function buildSignup(){
                 </div>
 
                 <div class="wrap-input100 rs1 validate-input m-3" data-validate="Password is required">
-                  <input class="input100" id="repass" type="password" name="rePass" placeholder="Repeat Password">
+                  <input class="input100" id="rePass" type="password" name="rePass" placeholder="Repeat Password">
                   <span class="focus-input100-1"></span>
                   <span class="focus-input100-2"></span>
               </div>
@@ -73,7 +77,8 @@ $("#login").click(()=> buildLogin())
 $("#signup").click((e)=>{
     e.preventDefault();
 
-    console.log('hhhhh')
+    console.log('rePass:',$("#rePass").val() )
+    console.log('Pass:',$("#pass").val() )
     const data = {
         first_name: $("#fName").val(),
         last_name: $("#lName").val(),
@@ -88,13 +93,21 @@ $("#signup").click((e)=>{
 
     const url = "http://localhost:3000/signup"
 
-    axios.post(url, data).then(res=>{
-        console.log(res)
-        buildHeader(res.data.user_data)
-        buildHomePage()
-        
-    }).catch(err=> console.log(err))
+    if(data.password != data.password_confirmation)
+    $("#alert").removeClass("d-none")
 
+    else{
+
+        
+        axios.post(url, data).then(res=>{
+            console.log(res)
+            buildHeader(res.data.user_data)
+            buildHomePage()
+            userController(res.data.user_data, res.data.auth_token)
+            
+        }).catch(err=> console.log(err))
+        
+    }
 
 })
 

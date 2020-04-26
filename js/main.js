@@ -11,11 +11,39 @@ import buildFooter from "../footer.js";
 // import staff from '../dummy/dummy-staff.js'
 
 
-// const axios = require('axios').default;
 
 
 
 
+// const url = "http://localhost:3000/questions"
+
+// axios.post(url,{
+// 	title:"hihi",
+// 	user_id:22
+// }).then((res)=>console.log(res)).catch(err=>console.log(err))
+
+
+
+
+
+
+let user = {}
+
+
+export function userController(newUser, token){
+
+	
+
+	if (newUser){
+		user = newUser;
+		user.token = token
+	}
+
+	else {
+		user = {}
+	}
+
+}
 
 // buildPageUnderCons()
 buildHeader()
