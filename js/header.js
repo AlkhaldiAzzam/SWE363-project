@@ -6,10 +6,14 @@ import buildProfile from "./profile-page.js";
 import buildStaffList from "./staff-list.js";
 import buildAboutUs from "./aboutUs.js";
 
-export default function buildHeader(params) {
+export default function buildHeader() {
     $("#header").empty()
 
-    if (params){
+    let nuser = window.localStorage.getItem('user')
+
+    if (nuser){
+
+      let user = JSON.parse(nuser)
 
         $("#header").append(`
         <nav class="navbar navbar-expand-lg navbar-light bg-light sticky-top" id="navbar">
@@ -45,7 +49,7 @@ export default function buildHeader(params) {
             <ul class="navbar-nav navbar-right">
 
             <li class="nav-item">
-            <p class="nav-link"> Hello ${params.first_name}</p>
+            <p class="nav-link"> Hello ${user.user_data.first_name}</p>
             </li>
               <li class="nav-item">
                 <button id="logout" class="nav-link" id="loginNavBtn">Log out</button>
@@ -57,6 +61,7 @@ export default function buildHeader(params) {
         `)
 
         $("#logout").click(()=> {
+          window.localStorage.removeItem('user')
             buildHeader()
             buildHomePage()
         })

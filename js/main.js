@@ -10,43 +10,26 @@ import buildHeader from './header.js'
 import buildFooter from "../footer.js";
 // import staff from '../dummy/dummy-staff.js'
 
+console.log(window.localStorage)
+
+// export let user = {}
 
 
-
-
-
-// const url = "http://localhost:3000/questions"
-
-// axios.post(url,{
-// 	title:"hihi",
-// 	user_id:22
-// }).then((res)=>console.log(res)).catch(err=>console.log(err))
+	buildHeader()
 
 
 
 
 
 
-let user = {}
+export function userController(newUser){
 
-
-export function userController(newUser, token){
-
-	
-
-	if (newUser){
-		user = newUser;
-		user.token = token
-	}
-
-	else {
-		user = {}
-	}
+	window.localStorage.setItem('user', JSON.stringify(newUser))
+	buildHeader()
 
 }
 
 // buildPageUnderCons()
-buildHeader()
 buildHomePage()
 
 buildFooter()

@@ -103,7 +103,9 @@ $("#signup").click((e)=>{
             console.log(res)
             buildHeader(res.data.user_data)
             buildHomePage()
-            userController(res.data.user_data, res.data.auth_token)
+            userController(res.data)
+       
+            console.log(JSON.parse(window.localStorage.getItem('user')))
             
         }).catch(err=> console.log(err))
         

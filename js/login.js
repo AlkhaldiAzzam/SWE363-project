@@ -77,20 +77,30 @@ export default function buildLogin(){
     
         }
     
-        const url = "http://localhost:3000/auth/login"
-    
-        axios.post(url, data).then(res=>{
-            console.log(res)
-            buildHeader(res.data.user_data)
-            buildHomePage()
-            userController(res.data.user_data, res.data.auth_token)
-            
-        }).catch(err=> {
-            console.log(err)
-            $("#alert").removeClass("d-none")
-        })
-    
-    
+        login(data)
+        
     })
     
+}
+
+function login(data){
+    
+    const url = "http://localhost:3000/auth/login"
+    
+    let loggedIn 
+    axios.post(url, data).then(res=>{
+        console.log(res)
+        loggedIn = true
+        userController(res.data)
+        buildHeader()
+        buildHomePage()
+        
+    }).catch(err=> {
+        $("#alert").removeClass("d-none")
+
+        console.log(err)
+    })
+console.log(loggedIn)
+    return loggedIn
+
 }
