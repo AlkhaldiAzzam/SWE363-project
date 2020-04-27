@@ -474,3 +474,13 @@ p.card-text {
     border: 1px solid #333333;
   }
   
+  hr.hr-style-one {
+    /* height:8px; */
+    border: 2px dashed #999;
+  }
+  hr.main-hr {
+    border: 0;
+    height: 1px;
+    background: #333;
+    background-image: linear-gradient(to right, #ccc, #333, #ccc);
+}

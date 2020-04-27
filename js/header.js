@@ -5,7 +5,8 @@ import buildSignup from "./signup.js";
 import buildProfile from "./profile-page.js";
 import buildStaffList from "./staff-list.js";
 import buildAboutUs from "./aboutUs.js";
-
+import buildQuestionsPage from "./QuestionsPage.js";
+import buildTestPage from './test_page.js';
 export default function buildHeader() {
     $("#header").empty()
 
@@ -122,7 +123,8 @@ $("#homeNavBtn").click(()=> buildHomePage())
 $("#loginNavBtn").click(()=> buildLogin())
 $("#signupNavBtn").click(()=> buildSignup())
 $("#aboutUsNavBtn").click(()=> buildAboutUs())
-
+$("#testBtn").click(()=> buildTestPage())
+$("#QuestionsBtn").click(()=> buildQuestionsPage())
 
 $("#dashBtn").click(()=> buildDashboard())
 $("#staffBtn").click(()=> buildStaffList())
