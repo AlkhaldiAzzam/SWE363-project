@@ -33,6 +33,7 @@ export default function buildHeader(params) {
                   <button class="dropdown-item" id="dashBtn">User Dashboard</button>
                   <button class="dropdown-item" id="staffBtn">Staff List</button>
                   <button class="dropdown-item" id="profileBtn">Profile Page</button>
+                  <button class="dropdown-item" id="QuestionsBtn">Questions</button>
                   
                   
               </li>
@@ -87,6 +88,8 @@ export default function buildHeader(params) {
               <button class="dropdown-item" id="dashBtn">User Dashboard</button>
               <button class="dropdown-item" id="staffBtn">Staff List</button>
               <button class="dropdown-item" id="profileBtn">Profile Page</button>
+              <button class="dropdown-item" id="QuestionsBtn">Questions</button>
+
               
               
           </li>
