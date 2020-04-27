@@ -32,9 +32,12 @@ export default function buildProfile(){
           <form>
             <div class="form-row ">
               <div class="col">
+              <label for="fName"> First Name </label>
                 <input type="text" id="fName" class="form-control" placeholder="${user.user_data.first_name}">
               </div>
               <div class="col">
+              <label for="lName"> Last Name </label>
+
                 <input type="text" id="lName" class="form-control" placeholder="${user.user_data.last_name}">
               </div>
             </div>

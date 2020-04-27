@@ -1,6 +1,11 @@
 
 
+
+
+
+
 export default function buildAboutUs(){
+    
     $(".main").empty();
     
 

@@ -33,9 +33,9 @@ export default function buildLogin(){
                 </div>
 
                 <div class="container-login100-form-btn m-t-20">
-                    <button id="login" class="login100-form-btn">
+                    <a href="/#/" id="login" class="login100-form-btn">
                         Sign in
-                    </button>
+                    </a>
                 </div>
 
                 <div class="text-center p-t-45 p-b-4">
@@ -77,6 +77,7 @@ export default function buildLogin(){
     
         }
     
+        
         login(data)
         
     })
