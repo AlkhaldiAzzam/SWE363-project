@@ -11,64 +11,75 @@ export default function buildQuestionsPage(){
     <br>
     <dl>
       <dt><h3>Question Title</h3></dt>
-      <br>
+      <dt><h5 class="Author-date">Author</h5></dt>
+      <dd><h6 class="Author-date">Question Date</h6></dd>
       <dd><h5>Question Details</h5></dd>
-      <dd><h6>Question Date</h6></dd>
+      <br>
       <button class="btn btn-primary">Read</button>
       <hr class="hr-style-one">
       <dt><h3>Question Title</h3></dt>
-      <br>
+      <dt><h5 class="Author-date">Author</h5></dt>
+      <dd><h6 class="Author-date">Question Date</h6></dd>
       <dd><h5>Question Details</h5></dd>
-      <dd><h6>Question Date</h6></dd>
+      <br>
       <button class="btn btn-primary">Read</button>
       <hr class="hr-style-one">
       <dt><h3>Question Title</h3></dt>
-      <br>
+      <dt><h5 class="Author-date">Author</h5></dt>
+      <dd><h6 class="Author-date">Question Date</h6></dd>
       <dd><h5>Question Details</h5></dd>
-      <dd><h6>Question Date</h6></dd>
+      <br>
       <button class="btn btn-primary">Read</button>
       <hr class="hr-style-one">
       <dt><h3>Question Title</h3></dt>
-      <br>
+      <dt><h5 class="Author-date">Author</h5></dt>
+      <dd><h6 class="Author-date">Question Date</h6></dd>
       <dd><h5>Question Details</h5></dd>
-      <dd><h6>Question Date</h6></dd>
+      <br>
       <button class="btn btn-primary">Read</button>
       <hr class="hr-style-one">
       <dt><h3>Question Title</h3></dt>
-      <br>
+      <dt><h5 class="Author-date">Author</h5></dt>
+      <dd><h6 class="Author-date">Question Date</h6></dd>
       <dd><h5>Question Details</h5></dd>
-      <dd><h6>Question Date</h6></dd>
+      <br>
       <button class="btn btn-primary">Read</button>
       <hr class="hr-style-one">
       <dt><h3>Question Title</h3></dt>
-      <br>
+      <dt><h5 class="Author-date">Author</h5></dt>
+      <dd><h6 class="Author-date">Question Date</h6></dd>
       <dd><h5>Question Details</h5></dd>
-      <dd><h6>Question Date</h6></dd>
+      <br>
       <button class="btn btn-primary">Read</button>
       <hr class="hr-style-one">
       <dt><h3>Question Title</h3></dt>
-      <br>
+      <dt><h5 class="Author-date">Author</h5></dt>
+      <dd><h6 class="Author-date">Question Date</h6></dd>
       <dd><h5>Question Details</h5></dd>
-      <dd><h6>Question Date</h6></dd>
+      <br>
       <button class="btn btn-primary">Read</button>
       <hr class="hr-style-one">
       <dt><h3>Question Title</h3></dt>
-      <br>
+      <dt><h5 class="Author-date">Author</h5></dt>
+      <dd><h6 class="Author-date">Question Date</h6></dd>
       <dd><h5>Question Details</h5></dd>
-      <dd><h6>Question Date</h6></dd>
+      <br>
       <button class="btn btn-primary">Read</button>
       <hr class="hr-style-one">
       <dt><h3>Question Title</h3></dt>
-      <br>
+      <dt><h5 class="Author-date">Author</h5></dt>
+      <dd><h6 class="Author-date">Question Date</h6></dd>
       <dd><h5>Question Details</h5></dd>
-      <dd><h6>Question Date</h6></dd>
+      <br>
       <button class="btn btn-primary">Read</button>
       <hr class="hr-style-one">
       <dt><h3>Question Title</h3></dt>
-      <br>
+      <dt><h5 class="Author-date">Author</h5></dt>
+      <dd><h6 class="Author-date">Question Date</h6></dd>
       <dd><h5>Question Details</h5></dd>
-      <dd><h6>Question Date</h6></dd>
+      <br>
       <button class="btn btn-primary">Read</button>
+      <hr class="hr-style-one">
     </dl>
     <br>
     <br>

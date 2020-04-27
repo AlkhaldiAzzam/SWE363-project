@@ -40,7 +40,7 @@ export default function buildDashboard(){
                 <div class="col-lg-4 col-md-6 col-sm-12">
                     <div class="card" style="width: 18rem;">
                         <div class="card-icon">
-                            <img src="images/Medical-Service.webp" class="card-img-top" alt="Request Medical Services">
+                            <img src="images/iconfinder_new-24_103173.png" class="card-img-top" alt="Post a question that is medical related">
                         </div>
                         <div class="card-body">
                           <h5 class="card-title">Post a Question</h5>
@@ -50,32 +50,21 @@ export default function buildDashboard(){
                       </div>
                 </div>
 
-                <div class="col-lg-4 col-md-6 col-sm-12">
+                <div class="col-lg-6 col-md-6 col-sm-12">
                     <div class="card" style="width: 18rem;">
                         <div class="card-icon">
-                            <img src="images/Service-Status.png" class="card-img-top" alt="• Track the status of sent request 
+                            <img src="images/1271366.svg" class="card-img-top" alt="Your Qeustions
                             ">
                         </div>
                         <div class="card-body">
-                          <h5 class="card-title">Track the Status of Sent Request</h5>
-                          <p class="card-text">Check latest updates on your requests.</p>
-                          <button  class="btn btn-primary underCons">Go</button>
+                          <h5 class="card-title">Your Questions</h5>
+                          <p class="card-text">see your questions and check the answers for them</p>
+                          <button  class="btn btn-primary underCons">View</button>
                         </div>
                       </div>
                 </div>
-                <div class="col-lg-4 col-md-6 col-sm-12">
-                    <div class="card" style="width: 18rem;">
-                        <div class="card-icon">
-                            <img src="images/Cancel (1).png" class="card-img-top" alt="Cancel a Request">
-                        </div>
-                        <div class="card-body">
-                          <h5 class="card-title">Cancel a Request</h5>
-                          <p class="card-text">Cancel any requests for services any time.</p>
-                          <button  class="btn btn-primary underCons">Requsts Menu</button>
-                        </div>
-                      </div>
-                </div>
-                <div class="col-lg-4 col-md-6 col-sm-12">
+                <!-- Cancel request-->
+                <div class="col-lg-6 col-md-12 col-sm-12">
                     <div class="card" style="width: 18rem;">
                         <div class="card-icon">
                             <img src="images/Feedback.svg" class="card-img-top" alt=" Send a feedback about the service">
@@ -98,3 +87,17 @@ export default function buildDashboard(){
     $("#PostQuestionBtn").click(()=> buildPostQuestionPage())
 
 }
+
+
+{/* <div class="col-lg-4 col-md-6 col-sm-12">
+                    <div class="card" style="width: 18rem;">
+                        <div class="card-icon">
+                            <img src="images/Cancel (1).png" class="card-img-top" alt="Cancel a Request">
+                        </div>
+                        <div class="card-body">
+                          <h5 class="card-title">Cancel a Request</h5>
+                          <p class="card-text">Cancel any requests for services any time.</p>
+                          <button  class="btn btn-primary underCons">Requsts Menu</button>
+                        </div>
+                      </div>
+                </div> */}

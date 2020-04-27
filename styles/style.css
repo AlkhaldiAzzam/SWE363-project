@@ -484,3 +484,6 @@ p.card-text {
     background: #333;
     background-image: linear-gradient(to right, #ccc, #333, #ccc);
 }
+.Author-date  {
+  margin: 10px auto;
+}
