@@ -28,7 +28,7 @@ export default function buildHeader() {
       <p class="nav-link"> Hello ${user.user_data.first_name}</p>
       </li>
         <li class="nav-item">
-          <button id="logout" class="nav-link" id="loginNavBtn">Log out</button>
+          <a href="#/home" id="logout" class="nav-link" id="loginNavBtn">Log out</a>
         </li> 
       
       </ul>`
@@ -50,18 +50,18 @@ export default function buildHeader() {
         $("#header").append(`
         <nav class="navbar navbar-expand-lg navbar-light bg-light sticky-top" id="navbar">
           <div class="container-fluid">
-            <a class="navbar-brand" href="/#"><img width="100px" height="55px" src="images/logo.png" > </a>
+            <a class="navbar-brand" href="/#/home"><img width="100px" height="55px" src="images/logo.png" > </a>
     
             <ul class=" navbar-nav">
               <li class="nav-item">
-                <a href="/#" class="nav-link" id='homeNavBtn'>Home</a>
+                <a href="/#/home" class="nav-link" id='homeNavBtn'>Home</a>
               </li>
               <li class="nav-item">
                 <a href="/#/aboutus" class="nav-link" id="aboutUsNavBtn">About Us</a>
               </li>
     
               <li class="nav-item dropdown">
-                <button class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <button class="nav-link dropdown-toggle" href="#/home" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                   Generate pages
                 </button>
                 <div class="dropdown-menu" aria-labelledby="navbarDropdown">

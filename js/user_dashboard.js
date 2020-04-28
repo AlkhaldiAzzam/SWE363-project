@@ -21,7 +21,7 @@ export default function buildDashboard(){
                         <div class="card-body">
                           <h5 class="card-title">Update Profile</h5>
                           <p class="card-text">Change your account username , password and medical information.</p>
-                          <button id="pro-page" class="btn btn-primary">Update</button>
+                          <a href="#/profile" id="pro-page" class="btn btn-primary">Update</a>
                         </div>
                       </div>
                 </div>
@@ -45,7 +45,7 @@ export default function buildDashboard(){
                         <div class="card-body">
                           <h5 class="card-title">Post a Question</h5>
                           <p class="card-text">Ask any Question that comes to your mind that related to a health matter.</p>
-                          <button  class="btn btn-primary" id="PostQuestionBtn">Ask</button>
+                          <a href="#/postquestion" class="btn btn-primary" id="PostQuestionBtn">Ask</a>
                         </div>
                       </div>
                 </div>
@@ -95,6 +95,6 @@ export default function buildDashboard(){
     $("#pro-page").click(()=> buildProfile())
     $("#feedbackBtn").click(()=> buildFeedbackPage())
     $(".underCons").click(()=> buildPageUnderCons())
-    $("#PostQuestionBtn").click(()=> buildPostQuestionPage())
+    // $("#PostQuestionBtn").click(()=> buildPostQuestionPage())
 
 }

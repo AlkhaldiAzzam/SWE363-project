@@ -12,10 +12,8 @@ import buildHeader from './header.js'
 import buildFooter from "../footer.js";
 import buildQuestionsPage from "./QuestionsPage.js";
 import buildTestPage from "./test_page.js";
+import buildPostQuestionPage from "./QuestionPostPage.js";
 
-// import buildTestPage from "./test_page.js"; // <----------------------------------- here
-
-// import staff from '../dummy/dummy-staff.js'
 
 console.log(window.localStorage)
 
@@ -27,8 +25,13 @@ console.log(window.localStorage)
  
 	var app = Sammy.apps.body;
 	 
-	app.get('#/', function(context) {
+	app.get('#/home', function(context) {
 		buildHomePage()
+	console.log("You're in the Main route");
+	});
+
+	app.get('#/postquestion', function(context) {
+		buildPostQuestionPage()
 	console.log("You're in the Main route");
 	});
 	 

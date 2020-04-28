@@ -1,6 +1,7 @@
 
 
 
+    // let user = JSON.parse(window.localStorage.getItem('user'))
 
 export default function buildQuestionsCommentsPage(data){
     $(".main").empty()
@@ -10,48 +11,50 @@ export default function buildQuestionsCommentsPage(data){
 
     const url = `http://localhost:3000/questions/${data.id}/comments`
 
-    let comments = []
-
+    
     let jumpos = []
+    let comments = []
     
     axios.get(url).then(res=>{
       comments = res.data
-      // console.log(res.data)
+    //   console.log(res.data)
     //   console.log(questions)
 
       
-
-
-    }).catch(err=> console.log(err))
-    
-    let commentArea = ""
-
-    if(window.localStorage.getItem('user')){
-        commentArea = ` <div class="form-group">
-        <label for="exampleFormControlTextarea1">Write your comment</label>
-        <textarea placeholder="Be nice and informative" class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
-      </div>
-      <button type="button" class="btn btn-primary mb-2">Submit your comment</button>
-    
-        </div>`
-    }
-
-
     comments.forEach(e => {
 
+        console.log(e)
         jumpos.push(`
         <div>
           
-        <dd><p> ${e.content} </p></dd>
-        <dd><h6>${e.created_at}</h6></dd>
+        <dd><h4> ${e.content} </h4></dd>
+          
+          <dd><h6>Posted by: ${e.created_by}</h6></dd>
+        <dd><p>${e.created_at}</p></dd>
+        
        
         </div>
         
         `)
 
-        console.log(e)
+        // console.log(e)
         
       });
+
+      let commentArea = ""
+
+      if(window.localStorage.getItem('user')){
+          commentArea = ` <div class="form-group">
+          <label for="exampleFormControlTextarea1">Write your comment</label>
+          <textarea placeholder="Be nice and informative" class="form-control" id="commentText" rows="3"></textarea>
+        </div>
+        <button id="subBtn" type="button" class="btn btn-primary mb-2">Submit your comment</button>
+      
+          </div>`
+  
+  
+      }
+
 
       $(".main").append(`
 
@@ -61,7 +64,7 @@ export default function buildQuestionsCommentsPage(data){
       <div class="container jumbotron">
         <div>
           <h3>${data.title}</h3>
-          <p> ${data.content} </p>
+          <h6> ${data.content} </h6>
         </div>
         <hr class="main-hr">
         <br>
@@ -82,5 +85,43 @@ export default function buildQuestionsCommentsPage(data){
   
       `)
 
+
+      $("#subBtn").click(()=>{
+        let data2 = {
+            content: $("#commentText").val(),
+            created_by: JSON.parse(window.localStorage.getItem('user')).user_data.first_name
+          }
+          console.log(data2)
+        axios.post(url,data2, {
+          'headers':{
+            'Authorization': JSON.parse(window.localStorage.getItem('user')).auth_token
+          }
+        }).then(res=>{
+            console.log(res.data)
+            const url2 = `http://localhost:3000/questions/${data.id}`
+            axios.get(url2,{
+                'headers':{
+                  'Authorization': JSON.parse(window.localStorage.getItem('user')).auth_token
+                }
+              }).then(res=>{
+                console.log("this is the fucked up nested call", res)
+                buildQuestionsCommentsPage(res.data)
+            })
+
+            console.log(res)
+        }).catch(err=> console.log(err))
+    })
+
+
+    }).catch(err=> console.log(err))
+    
+    
+
+console.log(comments)
+   
+
+
+      
+      
     
 }

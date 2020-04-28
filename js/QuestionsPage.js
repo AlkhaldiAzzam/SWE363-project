@@ -1,6 +1,8 @@
 import buildQuestionsCommentsPage from "./questions_comments.js"
+import { userController } from "./main.js"
 
 
+let user = JSON.parse(window.localStorage.getItem('user'))
 
 
 
@@ -10,7 +12,7 @@ export default function buildQuestionsPage(){
 
 
 
-    const url = "http://localhost:3000/questions"
+    const url = "http://localhost:3000/questions/"
 
     let questions = []
 
@@ -21,6 +23,8 @@ export default function buildQuestionsPage(){
       // console.log(res.data)
       console.log(questions)
 
+      questions.reverse()
+
       questions.forEach(e => {
 
         jumpos.push(`
@@ -28,7 +32,8 @@ export default function buildQuestionsPage(){
          <dt><h3>${e.title}</h3></dt>
          <br>
          <dd><h5>${e.content}</h5></dd>
-         <dd><h6>${e.created_at}</h6></dd>
+         <dd><h6>Posted by: ${e.created_by}</h6></dd>
+         <dd><p>${e.created_at}</p></dd>
          <a href="#/questions/${e.id}/comments" class="btn btn-primary readBtn">Read</a>
          <hr class="hr-style-one">
          </div>`)
