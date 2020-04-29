@@ -112,7 +112,7 @@ export function userController(newUser){
 // buildPageUnderCons()
 // buildHomePage()
 buildQuizPage()
-buildFooter()
+// buildFooter()
 // buildDashboard()
 // buildLogin()
 // buildSignup()

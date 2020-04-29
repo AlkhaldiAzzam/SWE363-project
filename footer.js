@@ -1,6 +1,6 @@
 export default function buildFooter(params) {
-    $("body").append(`
-    <footer class="page-footer font-small mt-4 brd ">
+    $("footer").append(`
+    
 
   <!-- Copyright -->
   <div class="footer-copyright text-center py-3">
@@ -19,7 +19,7 @@ export default function buildFooter(params) {
   
   <!-- Copyright -->
 
-</footer>
+
     `)
     
 }
