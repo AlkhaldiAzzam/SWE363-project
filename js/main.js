@@ -68,7 +68,7 @@ console.log(window.localStorage)
 
 
 	app.get('#/covid-test', function(context) {
-		buildTestPage()
+		buildQuizPage()
 	console.log("You're in the About us route");
 	});
 
@@ -111,7 +111,7 @@ export function userController(newUser){
 
 // buildPageUnderCons()
 // buildHomePage()
-buildQuizPage()
+// buildQuizPage()
 // buildFooter()
 // buildDashboard()
 // buildLogin()

@@ -4,6 +4,37 @@ export default function buildHomePage(){
     $(".main").empty();
 
 
+    let news = []
+
+    let newsSeg =[]
+
+axios.get("http://newsapi.org/v2/top-headlines?category=health&apiKey=fdd83ae8155a483ab5f1bc1c0b72ce3f").then(res =>{
+      // console.log(res.data.articles)
+      news.push(res.data.articles[0])
+      news.push(res.data.articles[1])
+      news.push(res.data.articles[2])
+      news.push(res.data.articles[3])
+
+
+      news.forEach(e=>{
+        newsSeg.push(`
+        <div class="col-sm-3">
+      <div class="card" style="width: 18rem;">
+      <img src="${e.urlToImage}" class="card-img-top newsImg" alt="..." width="100%">
+      <div class="card-body">
+        <h5 class="card-text">${e.title}</h5>
+        <a href="${e.url}" target="_blank" class="btn btn-primary m-4">Read full article</a>
+      </div>
+    </div>
+      </div>
+        `)
+      })
+      
+      console.log(news)
+
+
+
+
     $(".main").append(`
    
 
@@ -69,61 +100,12 @@ export default function buildHomePage(){
       </div>
       <!-- news -->
       <div class="container-fluid">
-        <h2>news</h4>
-        <div class="row">
-          <div class="col-sm-3">
-            <p>
-              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aut veniam
-              quia, facere provident reprehenderit assumenda consequatur atque
-              iusto quod libero? Nulla, fugit explicabo. Incidunt cupiditate
-              quibusdam, placeat eveniet sunt ipsam! Lorem ipsum dolor sit amet
-              consectetur adipisicing elit. Corrupti repudiandae illum dolorum,
-              obcaecati voluptates magni maiores non animi cupiditate similique
-              laboriosam iste autem voluptatibus! Distinctio officia aliquam nulla
-              fugit dolore!
-            </p>
-          </div>
-  
-          <div class="col-sm-3">
-            <p>
-              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aut veniam
-              quia, facere provident reprehenderit assumenda consequatur atque
-              iusto quod libero? Nulla, fugit explicabo. Incidunt cupiditate
-              quibusdam, placeat eveniet sunt ipsam! Lorem ipsum dolor sit amet
-              consectetur adipisicing elit. Corrupti repudiandae illum dolorum,
-              obcaecati voluptates magni maiores non animi cupiditate similique
-              laboriosam iste autem voluptatibus! Distinctio officia aliquam nulla
-              fugit dolore!
-            </p>
-          </div>
-  
-  
-  
-          <div class="col-sm-3">
-            <p>
-              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aut veniam
-              quia, facere provident reprehenderit assumenda consequatur atque
-              iusto quod libero? Nulla, fugit explicabo. Incidunt cupiditate
-              quibusdam, placeat eveniet sunt ipsam! Lorem ipsum dolor sit amet
-              consectetur adipisicing elit. Corrupti repudiandae illum dolorum,
-              obcaecati voluptates magni maiores non animi cupiditate similique
-              laboriosam iste autem voluptatibus! Distinctio officia aliquam nulla
-              fugit dolore!
-            </p>
-          </div>
-          <div class="col-sm-3">
-            <p>
-              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aut veniam
-              quia, facere provident reprehenderit assumenda consequatur atque
-              iusto quod libero? Nulla, fugit explicabo. Incidunt cupiditate
-              quibusdam, placeat eveniet sunt ipsam! Lorem ipsum dolor sit amet
-              consectetur adipisicing elit. Corrupti repudiandae illum dolorum,
-              obcaecati voluptates magni maiores non animi cupiditate similique
-              laboriosam iste autem voluptatibus! Distinctio officia aliquam nulla
-              fugit dolore!
-            </p>
-          </div>
-  
+        <h2>top news</h4>
+        <div class="row m-4">
+
+
+         
+    ${newsSeg.join('')}
   
   
         </div>
@@ -132,6 +114,14 @@ export default function buildHomePage(){
       </div>  
         </div>
     `)
+    }).catch(err=> console.log(err))
+
+
+
+
+
     
     $("#testBtn").click(()=> buildTestPage())
+
+    
 }

@@ -324,6 +324,8 @@ function apiCallTriage(){
     ).then(res=>{
         currentQuestion = res.data
         buildReportPage()
+        evidence = []
+        data = {}
         console.log(res.data.should_stop)
     }).catch(err => console.log(err))
 
