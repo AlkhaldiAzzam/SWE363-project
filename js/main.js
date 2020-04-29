@@ -13,6 +13,7 @@ import buildFooter from "../footer.js";
 import buildQuestionsPage from "./QuestionsPage.js";
 import buildTestPage from "./test_page.js";
 import buildPostQuestionPage from "./QuestionPostPage.js";
+import buildQuizPage from "./quiz_page.js";
 
 
 console.log(window.localStorage)
@@ -109,8 +110,8 @@ export function userController(newUser){
 }
 
 // buildPageUnderCons()
-buildHomePage()
-
+// buildHomePage()
+buildQuizPage()
 buildFooter()
 // buildDashboard()
 // buildLogin()
