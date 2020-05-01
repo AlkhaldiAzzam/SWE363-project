@@ -15,23 +15,37 @@ import buildTestPage from './test_page.js';
 export default function buildHeader() {
     $("#header").empty()
 
-    let nuser = window.localStorage.getItem('user')
+    // let nuser = window.localStorage.getItem('user')
 
-    let temp 
-    let user = JSON.parse(nuser)
+    // let user = JSON.parse(window.localStorage.getItem('user'))
+    let temp = ""
+    let adminTemp = ""
 
-    if(nuser){
+    if(window.localStorage.getItem('user')){
 
       temp = `<ul class="navbar-nav navbar-right">
 
       <li class="nav-item">
-      <p class="nav-link"> Hello ${user.user_data.first_name}</p>
+      <p class="nav-link"> Hello ${JSON.parse(window.localStorage.getItem('user')).user_data.first_name}</p>
       </li>
         <li class="nav-item">
           <a href="#/home" id="logout" class="nav-link" id="loginNavBtn">Log out</a>
         </li> 
       
       </ul>`
+
+      if (JSON.parse(window.localStorage.getItem('user')).user_data.user_type == "admin"){
+        adminTemp = `
+        <ul class="navbar-nav navbar-right">
+
+      
+        <li class="nav-item">
+                  <a href="/#/stafflist" id="admin-dashboard" class="nav-link" id="loginNavBtn">Admin Dashboard</a>
+        </li> 
+      
+      </ul>
+        `
+      }
     }
     else{
 
@@ -66,7 +80,6 @@ export default function buildHeader() {
                 </button>
                 <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                   <a href="/#/dashboard" class="dropdown-item" id="dashBtn">User Dashboard</a>
-                  <a href="/#/stafflist" class="dropdown-item" id="staffBtn">Staff List</a>
                   <a href="/#/profile" class="dropdown-item" id="profileBtn">Profile Page</a>
                   <a href="/#/questions" class="dropdown-item" id="QuestionsBtn">Questions Page</a>
                   <a href="/#/covid-test" class="dropdown-item" id="testBtn">Test Page</a>
@@ -74,7 +87,7 @@ export default function buildHeader() {
                   
               </li>
             </ul>
-            
+            ${adminTemp}
             <form class="form-inline my-2 my-lg-0">
               <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
               <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>

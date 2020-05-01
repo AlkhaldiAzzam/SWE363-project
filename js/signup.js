@@ -2,7 +2,7 @@ import buildLogin from "./login.js";
 import buildHomePage from "./home_page.js";
 import buildFooter from "../footer.js";
 import buildHeader from "./header.js";
-import { userController } from "./main.js";
+import { userController, domain } from "./main.js";
 
 
 export default function buildSignup(){
@@ -16,7 +16,7 @@ export default function buildSignup(){
         <div class="alert alert-danger d-none" id="alert" role="alert">
                  Please check your passwords!
             </div>
-            <form class="login100-form validate-form" >
+            <form onsubmit="return" id="signup-form" class="login100-form validate-form" >
                 <span class="login100-form-title p-b-33">
                     New Account 
                 </span>
@@ -32,8 +32,8 @@ export default function buildSignup(){
                   <span class="focus-input100-1"></span>
                   <span class="focus-input100-2"></span>
               </div>
-            <div class="wrap-input100 validate-input m-3" data-validate = "Valid email is required: ex@abc.xyz">
-              <input class="input100" id="email" type="text" name="email" placeholder="Email">
+            <div class="wrap-input100  m-3" >
+              <input class="input100" id="email" type="email" name="email" placeholder="Email" required>
               <span class="focus-input100-1"></span>
               <span class="focus-input100-2"></span>
           </div>
@@ -51,9 +51,9 @@ export default function buildSignup(){
               </div>
 
                 <div class="container-login100-form-btn m-t-20">
-                    <button id="signup" class="login100-form-btn">
-                        Sign up
-                    </button>
+                    <input type="submit" id="signup" class="login100-form-btn" value="Sign up"/>
+                        
+                    
                 </div>
 
                 
@@ -63,20 +63,25 @@ export default function buildSignup(){
                       Already have an account?
                     </span>
 
-                    <button class="txt2 hov1 " id="login">
+                    <a href="/#/login" class="txt2 hov1 " id="login">
                         Login
-                    </button>
+                    </a>
                 </div>
             </form>
         </div>
     </div>
 </div>`)
 
-$("#login").click(()=> buildLogin())
+// $("#login").click(()=> buildLogin())
+
+
+
 
 $("#signup").click((e)=>{
-    e.preventDefault();
 
+
+
+    e.preventDefault();
     console.log('rePass:',$("#rePass").val() )
     console.log('Pass:',$("#pass").val() )
     const data = {
@@ -84,13 +89,13 @@ $("#signup").click((e)=>{
         last_name: $("#lName").val(),
         email: $("#email").val(),
         password: $("#pass").val(),
-        password_confirmation: $("#rePass").val(),
-        u_id: "1234567890",
-        type: "Normal User"
+        password_confirmation: $("#rePass").val()
 
 
     }
 
+
+    if (ValidateEmail(data.email)){
     const url = "http://localhost:3000/signup"
 
     if(data.password != data.password_confirmation)
@@ -101,17 +106,28 @@ $("#signup").click((e)=>{
         
         axios.post(url, data).then(res=>{
             console.log(res)
-            buildHeader(res.data.user_data)
-            buildHomePage()
+            // buildHeader(res.data.user_data)
+            // buildHomePage()
             userController(res.data)
+
+            window.location.href = domain + "home"
        
             console.log(JSON.parse(window.localStorage.getItem('user')))
             
         }).catch(err=> console.log(err))
         
     }
-
+    }
 })
 
 }
 
+function ValidateEmail(mail) 
+{
+ if (/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(mail))
+  {
+    return (true)
+  }
+    alert("You have entered an invalid email address!")
+    return (false)
+}

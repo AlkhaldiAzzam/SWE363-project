@@ -14,7 +14,10 @@ import buildQuestionsPage from "./QuestionsPage.js";
 import buildTestPage from "./test_page.js";
 import buildPostQuestionPage from "./QuestionPostPage.js";
 import buildQuizPage from "./quiz_page.js";
+import buildQuestionsCommentsPage from "./questions_comments.js";
 
+
+export const domain = "http://localhost:5500/#/"
 
 console.log(window.localStorage)
 
@@ -73,9 +76,13 @@ console.log(window.localStorage)
 	});
 
 	app.get(`#/questions/:id/comments`, function(context) {
-		// buildQuestionsCommentsPage(q)
+		buildQuestionsCommentsPage(context.params.id)
+
+		// let queryString = window.location.search;
+		console.log(context.params.id);
+
 		
-		console.log("You're in the Main route");
+		// console.log("You're in the Main route");
 		});
 
 		app.get('#/login', function(context) {
@@ -91,7 +98,9 @@ console.log(window.localStorage)
 // console.log(Sammy.apps.body)
 
 
-
+function test(params) {
+	
+}
 
 
 
@@ -120,3 +129,7 @@ export function userController(newUser){
 // buildStaffList()
 // buildAboutUs()
 // buildTestPage()
+
+
+
+

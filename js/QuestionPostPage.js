@@ -1,8 +1,9 @@
 import buildQuestionsCommentsPage from "./questions_comments.js";
+import { domain } from "./main.js";
 
 const url = "http://localhost:3000/questions"
 let user = JSON.parse(window.localStorage.getItem('user'))
-console.log(user.auth_token)
+// console.log(user.auth_token)
 export default function buildPostQuestionPage(){
   $(".main").empty();
   
@@ -27,7 +28,7 @@ export default function buildPostQuestionPage(){
         </div>
 
         <input class="btn btn-primary" type="reset" value="Cancel">
-        <a href="/#/questions/new/comments" id="subBtn" class="btn btn-primary" type="submit" >Submit </a>
+        <button  id="subBtn" class="btn btn-primary" type="submit" >Submit </button>
         
       </form>
       </div>
@@ -47,7 +48,8 @@ export default function buildPostQuestionPage(){
           'Authorization': JSON.parse(window.localStorage.getItem('user')).auth_token
         }
       }).then(res=>{
-        buildQuestionsCommentsPage(res.data)
+        // buildQuestionsCommentsPage(res.data)
+        window.location.href = domain + `questions/${res.data.id}/comments`
 
         console.log(res)
       }).catch(err=>{

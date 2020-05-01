@@ -1,7 +1,7 @@
 import buildSignup from "./signup.js";
 import buildHeader from './header.js';
 import buildHomePage from './home_page.js'
-import { userController } from "./main.js";
+import { userController, domain } from "./main.js";
 
 export default function buildLogin(){
     $(".main").empty();
@@ -53,9 +53,9 @@ export default function buildLogin(){
                         Create an account?
                     </span>
 
-                    <button class="txt2 hov1" id="signup">
+                    <a href="/#/signup" class="txt2 hov1" id="signup">
                         Sign up
-                    </button>
+                    </a>
                 </div>
             </form>
         </div>
@@ -63,7 +63,7 @@ export default function buildLogin(){
 </div>
     `)
 
-    $("#signup").click(()=> buildSignup())
+    // $("#signup").click(()=> buildSignup())
 
     $("#login").click((e)=>{
         e.preventDefault();
@@ -88,20 +88,19 @@ function login(data){
     
     const url = "http://localhost:3000/auth/login"
     
-    let loggedIn 
+
     axios.post(url, data).then(res=>{
         console.log(res)
-        loggedIn = true
+      
         userController(res.data)
-        buildHeader()
-        buildHomePage()
+        // buildHeader()
+        window.location.href = domain +"#/home"
         
     }).catch(err=> {
         $("#alert").removeClass("d-none")
 
         console.log(err)
     })
-console.log(loggedIn)
-    return loggedIn
+
 
 }

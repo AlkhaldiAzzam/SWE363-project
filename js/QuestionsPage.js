@@ -1,9 +1,8 @@
 import buildQuestionsCommentsPage from "./questions_comments.js"
-import { userController } from "./main.js"
+import { userController, domain } from "./main.js"
 
 
 let user = JSON.parse(window.localStorage.getItem('user'))
-
 
 
 export default function buildQuestionsPage(){
@@ -25,16 +24,30 @@ export default function buildQuestionsPage(){
 
       questions.reverse()
 
+      let isAdmin = false
+
+      if (JSON.parse(window.localStorage.getItem('user')).user_data.user_type == "admin")
+        isAdmin = true
+
+        // console.log(JSON.parse(window.localStorage.getItem('user')).user_data.user_type)
       questions.forEach(e => {
+
+        let deleteButton = ""
+        if (isAdmin)
+          deleteButton = `<dt> <button id="${e.id}" class="btn btn-primary deleteBtn">Delete post</button> </dt>`
 
         jumpos.push(`
         <div>
-         <dt><h3>${e.title}</h3></dt>
+        <div class="d-flex justify-content-between">
+         <dt class="float-left"><h3>${e.title}</h3></dt>
+         ${deleteButton}
+        </div>
+
          <br>
          <dd><h5>${e.content}</h5></dd>
          <dd><h6>Posted by: ${e.created_by}</h6></dd>
          <dd><p>${e.created_at}</p></dd>
-         <a href="#/questions/${e.id}/comments" class="btn btn-primary readBtn">Read</a>
+         <button  id="${e.id}" class="btn btn-primary readBtn">Read</button>
          <hr class="hr-style-one">
          </div>`)
         
@@ -44,36 +57,22 @@ export default function buildQuestionsPage(){
 
 
       <div class="container jumbotron">
-      <h1>Questions <i class="fas fa-question"></i></h1>
+      <div class="d-flex justify-content-between">
+      <h1 >Questions <i class="fas fa-question"></i></h1>
+      <a href="#/postquestion" class="btn btn-primary">Post</a>
+
+      </div>
       <hr class="main-hr">
       <br>
       <dl>
   
-      ${jumpos}
+      ${jumpos.join('')}
   
       </dl>
       <br>
       <br>
       <br>
-      <nav aria-label="Page navigation example">
-        <ul class="pagination justify-content-center">
-          <li class="page-item">
-            <a class="page-link" href="#" tabindex="-1" aria-disabled="true">Previous</a>
-          </li>
-          <li class="page-item"><a class="page-link" href="#">1</a></li>
-          <li class="page-item"><a class="page-link" href="#">2</a></li>
-          <li class="page-item"><a class="page-link" href="#">3</a></li>
-          <li class="page-item"><a class="page-link" href="#">4</a></li>
-          <li class="page-item"><a class="page-link" href="#">5</a></li>
-          <li class="page-item"><a class="page-link" href="#">6</a></li>
-          <li class="page-item"><a class="page-link" href="#">7</a></li>
-          <li class="page-item"><a class="page-link" href="#">8</a></li>
-          <li class="page-item"><a class="page-link" href="#">9</a></li>
-          <li class="page-item">
-            <a class="page-link" href="#">Next</a>
-          </li>
-        </ul>
-      </nav>
+      
     </div>
   
   
@@ -84,20 +83,37 @@ export default function buildQuestionsPage(){
         // console.log($(this).parent().find('h3').text())
 
 
-        let q = questions.find(e=> e.title == $(this).parent().find('h3').text())
+        let q = $(this).attr('id')
 
         console.log(q)
 
-          buildQuestionsCommentsPage(q)
-        // var app = Sammy.apps.body;
-        // // console.log(app)
-	 
-	      // app.get(`#/questions/${q.id}/comments`, function(context) {
+        window.location.href = domain + `questions/${q}/comments`
+
           
-	      // console.log("You're in the Main route");
-      	// });
 
       })
+
+      $(".deleteBtn").click(function(){
+
+        let url2 = `http://localhost:3000/questions/${this.id}/deletebyadmin`
+
+
+        let con = confirm("Are you sure you want to delete this?")
+
+        if(con){
+
+          axios.post(url2,{}, {
+            'headers': {
+              'Authorization': JSON.parse(window.localStorage.getItem('user')).auth_token
+            }
+          }).then(res=>{
+            location.reload()
+            console.log(res)
+          }).catch(err=>console.log(err))
+        }
+          
+      })
+
 
     }).catch(err=> console.log(err))
     

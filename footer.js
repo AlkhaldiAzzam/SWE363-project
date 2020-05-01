@@ -1,4 +1,4 @@
-export default function buildFooter(params) {
+export default function buildFooter() {
     $("footer").append(`
     
 

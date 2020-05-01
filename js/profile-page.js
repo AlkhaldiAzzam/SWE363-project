@@ -1,4 +1,5 @@
 import { userController } from "./main.js";
+import buildHeader from "./header.js";
 
   let user = JSON.parse(window.localStorage.getItem('user'))
 
@@ -33,12 +34,12 @@ export default function buildProfile(){
             <div class="form-row ">
               <div class="col">
               <label for="fName"> First Name </label>
-                <input type="text" id="fName" class="form-control" placeholder="${user.user_data.first_name}">
+                <input type="text" id="fName" class="form-control" value="${JSON.parse(window.localStorage.getItem('user')).user_data.first_name}">
               </div>
               <div class="col">
               <label for="lName"> Last Name </label>
 
-                <input type="text" id="lName" class="form-control" placeholder="${user.user_data.last_name}">
+                <input type="text" id="lName" class="form-control" value="${JSON.parse(window.localStorage.getItem('user')).user_data.last_name}">
               </div>
             </div>
           </form>
@@ -50,7 +51,7 @@ export default function buildProfile(){
           <form>
             <div class="form-group">
               <label for="exampleInputEmail1"> New Email address</label>
-              <input id="email" type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="${user.user_data.email}">
+              <input id="email" type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" value="${JSON.parse(window.localStorage.getItem('user')).user_data.email}">
             </div>
             </form>
         </div>
@@ -86,19 +87,29 @@ export default function buildProfile(){
 
   $("#btn").click(()=>{
 
-    console.log("auth token",user.auth_token)
+    // console.log("auth token",user.auth_token)
     
-    axios.patch(url,{
-      headers: {
-        Authorization: user.auth_token
-      },
+
+    let data = {
       first_name: $("#fName").val(),
         last_name: $("#lName").val(),
         email: $("#email").val()
+    }
+
+    axios.post(url,data,{
+      'headers': {
+        'Authorization': JSON.parse(window.localStorage.getItem('user')).auth_token
+      },
+      
     }).then(res=>{
       console.log(res)
 
-      userController(res.data)
+      // userController(res.data)
+      let ouser = JSON.parse(window.localStorage.getItem('user'))
+      ouser.user_data = res.data
+
+      window.localStorage.setItem('user', JSON.stringify(ouser))
+      buildHeader()
 
     }).catch(err=>console.log(err))
   })
