@@ -1,5 +1,6 @@
 body{
     /* padding-top: 130px; */
+    background-color: whitesmoke;
 }
 .navbar-dark .navbar-brand {
     color: #FD2;
@@ -14,6 +15,8 @@ a {
     /* background-color: #dddddd; */
   }
 .jumbotron {
+    background-color: white;
+    margin-top: 60px;
     margin-left: auto;
     margin-right: auto;
 }
@@ -486,4 +489,29 @@ p.card-text {
 }
 .Author-date  {
   margin: 10px auto;
+}
+.services-header {
+  margin: auto auto 20px auto;
+}
+div.counter {
+    text-align: center;
+}
+h1.count-text-header {
+      font-size: 4.0em;
+      font-weight: bold;
+}
+div.deaths , div.recovered {
+    display: inline-block
+}
+.deaths {
+  color: red;
+  margin-right: 10px;
+}
+.recovered {
+  color: green;
+  margin-left: 10px;
+}
+.scrolling-news {
+  margin-top: 40px;
+  text-align: center;
 }
