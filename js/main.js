@@ -23,7 +23,7 @@ import buildTestPage from "./test_page.js"; // <--------------------------------
 
 // buildPageUnderCons()
 buildHeader()
-// buildHomePage()
+buildHomePage()
 
 buildFooter()
 // buildDashboard()
