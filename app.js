@@ -7,7 +7,7 @@
     $(document).ready(function() {
 
         
-    app.run('/#/home');
+    app.run('SWE363-project/#/home');
 
     });
      
