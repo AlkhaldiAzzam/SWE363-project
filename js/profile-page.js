@@ -62,13 +62,13 @@ export default function buildProfile(){
           <form class="form-inline d-flex justify-content-around">
             <div class="form-group">
               <label for="inputPassword6"> New Password</label>
-              <input type="password" id="inputPassword6" class="form-control mx-sm-3" aria-describedby="passwordHelpInline">
+              <input type="password" id="password" class="form-control mx-sm-3" aria-describedby="passwordHelpInline">
               
             </div>
 
             <div class="form-group">
               <label for="inputPassword6">Repeat Password</label>
-              <input type="password" id="inputPassword6" class="form-control mx-sm-3" aria-describedby="passwordHelpInline">
+              <input type="password" id="passCon" class="form-control mx-sm-3" aria-describedby="passwordHelpInline">
               
             </div>
           </form>
@@ -93,7 +93,9 @@ export default function buildProfile(){
     let data = {
       first_name: $("#fName").val(),
         last_name: $("#lName").val(),
-        email: $("#email").val()
+        email: $("#email").val(),
+        password:$("#password").val() ,
+        password_confirmation: $("#passCon").val()
     }
 
     axios.post(url,data,{
