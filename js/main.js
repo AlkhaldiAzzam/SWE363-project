@@ -17,7 +17,7 @@ import buildQuizPage from "./quiz_page.js";
 import buildQuestionsCommentsPage from "./questions_comments.js";
 
 
-export const domain = "http://localhost:5500/#/"
+export const domain = "https://alkhaldiazzam.github.io/SWE363-project/#/"
 
 console.log(window.localStorage)
 
