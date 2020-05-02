@@ -17,12 +17,14 @@ import buildQuizPage from "./quiz_page.js";
 import buildQuestionsCommentsPage from "./questions_comments.js";
 
 
+
 export let domain
 if(location.href.includes('localhost'))
 	domain = "http://localhost:5500/"
 
 	else 
 		domain = "https://alkhaldiazzam.github.io/SWE363-project/"
+
 
 console.log(window.localStorage)
 

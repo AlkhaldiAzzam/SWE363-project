@@ -105,7 +105,9 @@ axios.get("https://newsapi.org/v2/top-headlines?category=health&apiKey=fdd83ae81
         <div class="col-lg-6 col-md-12 col-sm-12">
           <div class="card" style="width: 18rem;">
             <div class="card-icon">
+
                 <img src="./images/Medical-Service.webp" class="card-img-top" alt="Do a test to check up on your self">
+
             </div>
             <div class="card-body">
               <h5 class="card-title">Test For Covid-19</h5>
@@ -117,7 +119,7 @@ axios.get("https://newsapi.org/v2/top-headlines?category=health&apiKey=fdd83ae81
         <div class="col-lg-6 col-md-12 col-sm-12">
           <div class="card" style="width: 18rem;">
               <div class="card-icon">
-                  <img src="images/iconfinder_new-24_103173.png" class="card-img-top" alt="Post a question that is medical related">
+                  <img src="../images/iconfinder_new-24_103173.png" class="card-img-top" alt="Post a question that is medical related">
               </div>
               <div class="card-body">
                 <h5 class="card-title">Post a Question</h5>
