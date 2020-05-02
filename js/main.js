@@ -17,7 +17,14 @@ import buildQuizPage from "./quiz_page.js";
 import buildQuestionsCommentsPage from "./questions_comments.js";
 
 
-export const domain = "https://alkhaldiazzam.github.io/SWE363-project/#/"
+
+export let domain
+if(location.href.includes('localhost'))
+	domain = "http://localhost:5500/"
+
+	else 
+		domain = "https://alkhaldiazzam.github.io/SWE363-project/"
+
 
 console.log(window.localStorage)
 
@@ -29,53 +36,53 @@ console.log(window.localStorage)
  
 	var app = Sammy.apps.body;
 	 
-	app.get('#/home', function(context) {
+	app.get('/#/home', function(context) {
 		buildHomePage()
 	console.log("You're in the Main route");
 	});
 
-	app.get('#/postquestion', function(context) {
+	app.get('/#/postquestion', function(context) {
 		buildPostQuestionPage()
 	console.log("You're in the Main route");
 	});
 	 
    
-	app.get('#/aboutus', function(context) {
+	app.get('/#/aboutus', function(context) {
 		buildAboutUs()
 	console.log("You're in the About us route");
 	});
 
-	app.get('#/profile', function(context) {
+	app.get('/#/profile', function(context) {
 		buildProfile()
 	console.log("You're in the About us route");
 	});
 
 	
-	app.get('#/questions', function(context) {
+	app.get('/#/questions', function(context) {
 		buildQuestionsPage()
 	console.log("You're in the About us route");
 	});
 
 
-	app.get('#/dashboard', function(context) {
+	app.get('/#/dashboard', function(context) {
 		buildDashboard()
 	console.log("You're in the About us route");
 	});
 
 
 
-	app.get('#/stafflist', function(context) {
+	app.get('/#/stafflist', function(context) {
 		buildStaffList()
 	console.log("You're in the About us route");
 	});
 
 
-	app.get('#/covid-test', function(context) {
+	app.get('/#/covid-test', function(context) {
 		buildQuizPage()
 	console.log("You're in the About us route");
 	});
 
-	app.get(`#/questions/:id/comments`, function(context) {
+	app.get(`/#/questions/:id/comments`, function(context) {
 		buildQuestionsCommentsPage(context.params.id)
 
 		// let queryString = window.location.search;
@@ -85,12 +92,12 @@ console.log(window.localStorage)
 		// console.log("You're in the Main route");
 		});
 
-		app.get('#/login', function(context) {
+		app.get('/login', function(context) {
 			buildLogin()
 		console.log("You're in the About us route");
 		});
 
-		app.get('#/signup', function(context) {
+		app.get('/signup', function(context) {
 			buildSignup()
 		console.log("You're in the About us route");
 		});

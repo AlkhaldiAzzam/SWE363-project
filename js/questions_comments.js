@@ -78,7 +78,7 @@ export default function buildQuestionsCommentsPage(id){
           <h6 class="m-4"> ${data.content} </h6>
           </div>
   
-          <a href="#/questions" class=" ">Back to posts</a>
+          <a href="/questions" class=" ">Back to posts</a>
           </div>
         <hr class="main-hr">
         <br>
