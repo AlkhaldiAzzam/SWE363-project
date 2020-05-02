@@ -1,3 +1,4 @@
+import buildStaffList from "./staff-list.js";
 
 
 
@@ -35,7 +36,7 @@ export default function buildAboutUs(){
                       <div class="card-body">
                         <h5 class="card-title">HS Medical staff</h5>
                         <p class="card-text">check out our team of experts in medical field who are looking forward to serve you and provide you with the neede information you need.</p>
-                        <a href="#" class="btn btn-primary">HS Staff Members</a>
+                        <button class="btn btn-primary" id="HSStaffBtn">HS Staff Members</button>
                       </div>
                     </div>
               </div>
@@ -68,3 +69,5 @@ export default function buildAboutUs(){
     </div>
     </div>`)
 }
+
+$('#HSStaffBtn').click(() => buildStaffList())

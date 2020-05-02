@@ -254,10 +254,93 @@ axios.get("http://newsapi.org/v2/top-headlines?category=health&apiKey=fdd83ae815
   
   
         </div>
-  
-  
-      </div>  
+        <div class="col-lg-4 col-md-6 col-sm-12">
+          <div class="card" style="width: 18rem;">
+              <div class="card-icon">
+                  <img src="images/iconfinder_new-24_103173.png" class="card-img-top" alt="Post a question that is medical related">
+              </div>
+              <div class="card-body">
+                <h5 class="card-title">news 1</h5>
+                <p class="card-text">Ask any Question that comes to your mind that related to a health matter.</p>
+                <button  class="btn btn-primary" id="PostQuestionBtn">Ask</button>
+              </div>
+            </div>
         </div>
+      </div>
+    
+    
+    
+    <!-- end  -->
+    
+    
+    
+    
+        </div>
+        <div class="carousel-item">
+          
+    
+    
+    
+          <!-- start -->
+          <div class="row">
+            <div class="col-lg-4 col-md-6 col-sm-12">
+              <div class="card" style="width: 18rem;">
+                  <div class="card-icon">
+                      <img src="images/iconfinder_new-24_103173.png" class="card-img-top" alt="Post a question that is medical related">
+                  </div>
+                  <div class="card-body">
+                    <h5 class="card-title">news 1</h5>
+                    <p class="card-text">Ask any Question that comes to your mind that related to a health matter.</p>
+                    <button  class="btn btn-primary" id="PostQuestionBtn">Ask</button>
+                  </div>
+                </div>
+          </div>
+          <div class="col-lg-4 col-md-6 col-sm-12">
+            <div class="card" style="width: 18rem;">
+                <div class="card-icon">
+                    <img src="images/iconfinder_new-24_103173.png" class="card-img-top" alt="Post a question that is medical related">
+                </div>
+                <div class="card-body">
+                  <h5 class="card-title">news 1</h5>
+                  <p class="card-text">Ask any Question that comes to your mind that related to a health matter.</p>
+                  <button  class="btn btn-primary" id="PostQuestionBtn">Ask</button>
+                </div>
+              </div>
+        </div>
+        <div class="col-lg-4 col-md-6 col-sm-12">
+          <div class="card" style="width: 18rem;">
+              <div class="card-icon">
+                  <img src="images/iconfinder_new-24_103173.png" class="card-img-top" alt="Post a question that is medical related">
+              </div>
+              <div class="card-body">
+                <h5 class="card-title">news 1</h5>
+                <p class="card-text">Ask any Question that comes to your mind that related to a health matter.</p>
+                <button  class="btn btn-primary" id="PostQuestionBtn">Ask</button>
+              </div>
+            </div>
+        </div>
+      </div>
+    
+    
+    
+    <!-- end  -->
+    
+    
+    
+    
+        </div>
+      </div>
+    
+      <!-- Left and right controls -->
+      <a class="carousel-control-prev" href="#demo" data-slide="prev">
+        <span class="carousel-control-prev-icon"></span>
+      </a>
+      <a class="carousel-control-next" href="#demo" data-slide="next">
+        <span class="carousel-control-next-icon"></span>
+      </a>
+    
+    </div>
+  </div>
     `)
     }).catch(err=> console.log(err))
 
