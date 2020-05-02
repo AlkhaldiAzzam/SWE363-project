@@ -3,7 +3,7 @@ import buildHeader from "./header.js";
 
   let user = JSON.parse(window.localStorage.getItem('user'))
 
-    const url = "http://localhost:3000/users/profile/update"
+    const url = "https://swe363-api.herokuapp.com/users/profile/update"
 
 
 

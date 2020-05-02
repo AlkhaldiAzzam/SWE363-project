@@ -103,7 +103,7 @@ $("#signup").click((e)=>{
 
 
     if (ValidateEmail(data.email)){
-    const url = "http://localhost:3000/signup"
+    const url = "https://swe363-api.herokuapp.com/signup"
 
     if(data.password != data.password_confirmation)
     $("#alert").removeClass("d-none")

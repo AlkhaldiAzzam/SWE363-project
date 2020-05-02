@@ -11,7 +11,7 @@ export default function buildQuestionsPage(){
 
 
 
-    const url = "http://localhost:3000/questions/"
+    const url = "https://swe363-api.herokuapp.com/questions/"
 
     let questions = []
 
@@ -95,7 +95,7 @@ export default function buildQuestionsPage(){
 
       $(".deleteBtn").click(function(){
 
-        let url2 = `http://localhost:3000/questions/${this.id}/deletebyadmin`
+        let url2 = `https://swe363-api.herokuapp.com/questions/${this.id}/deletebyadmin`
 
 
         let con = confirm("Are you sure you want to delete this?")

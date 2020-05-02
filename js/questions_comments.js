@@ -9,7 +9,7 @@ export default function buildQuestionsCommentsPage(id){
 
 
 
-    const url = `http://localhost:3000/questions/${id}/comments`
+    const url = `https://swe363-api.herokuapp.com/questions/${id}/comments`
 
     
     let jumpos = []
@@ -61,7 +61,7 @@ export default function buildQuestionsCommentsPage(id){
 
       let data 
 
-      axios.get(`http://localhost:3000/questions/${id}`).then(res=> {
+      axios.get(`https://swe363-api.herokuapp.com/questions/${id}`).then(res=> {
           
       data = res.data
     

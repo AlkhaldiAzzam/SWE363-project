@@ -4,7 +4,7 @@ import staff from '../dummy/dummy-staff.js'
 export default function buildStaffList(q){
   let url
 
-  q? url = `http://localhost:3000/users/getallofthem/${q}` : url = "http://localhost:3000/users/getallofthem"
+  q? url = `https://swe363-api.herokuapp.com/users/getallofthem/${q}` : url = "https://swe363-api.herokuapp.com/users/getallofthem"
 
 
 
@@ -156,7 +156,7 @@ export default function buildStaffList(q){
       let con = confirm("Are you sure this user is worthy?")
      
   if (con){
-  axios.post(`http://localhost:3000/users/${this.id}/promote`,{}, {
+  axios.post(`https://swe363-api.herokuapp.com/users/${this.id}/promote`,{}, {
     
     'headers':{
       'Authorization': JSON.parse(window.localStorage.getItem('user')).auth_token
@@ -176,7 +176,7 @@ export default function buildStaffList(q){
       let con = confirm("Are you sure this user is not worthy?")
      
   if(con){
-  axios.post(`http://localhost:3000/users/${this.id}/demote`,{}, {
+  axios.post(`https://swe363-api.herokuapp.com/users/${this.id}/demote`,{}, {
     
     'headers':{
       'Authorization': JSON.parse(window.localStorage.getItem('user')).auth_token
@@ -202,7 +202,7 @@ export default function buildStaffList(q){
       let con = confirm("Are you sure you want to delete this user?")
      
   if(con){
-  axios.post(`http://localhost:3000/users/${this.id}/delete`,{}, {
+  axios.post(`https://swe363-api.herokuapp.com/users/${this.id}/delete`,{}, {
     
     'headers':{
       'Authorization': JSON.parse(window.localStorage.getItem('user')).auth_token

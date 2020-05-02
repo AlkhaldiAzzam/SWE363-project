@@ -86,7 +86,7 @@ export default function buildLogin(){
 
 function login(data){
     
-    const url = "http://localhost:3000/auth/login"
+    const url = "https://swe363-api.herokuapp.com/auth/login"
     
 
     axios.post(url, data).then(res=>{

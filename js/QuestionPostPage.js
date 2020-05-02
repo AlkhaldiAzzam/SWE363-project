@@ -1,7 +1,7 @@
 import buildQuestionsCommentsPage from "./questions_comments.js";
 import { domain } from "./main.js";
 
-const url = "http://localhost:3000/questions"
+const url = "https://swe363-api.herokuapp.com/questions"
 let user = JSON.parse(window.localStorage.getItem('user'))
 // console.log(user.auth_token)
 export default function buildPostQuestionPage(){
