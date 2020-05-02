@@ -1,13 +1,22 @@
+import buildQuestionsCommentsPage from "./questions_comments.js";
+import { domain } from "./main.js";
 
+const url = "https://swe363-api.herokuapp.com/questions"
+let user = JSON.parse(window.localStorage.getItem('user'))
+// console.log(user.auth_token)
 export default function buildPostQuestionPage(){
-    $(".main").empty();
+  $(".main").empty();
+  
+  
+  
     
+
 
     $(".main").append(`
     <div class="jumbotron">
         <div class="form-group">
           <label for="QuestionTitle">Title of Your Question</label>
-          <input type="email" class="form-control" id="QuestionTitle" placeholder="Question Title...">
+          <input type="text" class="form-control" id="QuestionTitle" placeholder="Question Title...">
         </div>
 
 
@@ -19,9 +28,34 @@ export default function buildPostQuestionPage(){
         </div>
 
         <input class="btn btn-primary" type="reset" value="Cancel">
-        <input class="btn btn-primary" type="submit" value="Submit">
+        <button  id="subBtn" class="btn btn-primary" type="submit" >Submit </button>
         
       </form>
       </div>
     `)
+    $("#subBtn").click(()=>{
+    
+
+
+      let data = {
+        title: $("#QuestionTitle").val(),
+        content: $("#QuestionDetails").val()
+
+      }
+
+      axios.post(url,data,{
+        'headers':{
+          'Authorization': JSON.parse(window.localStorage.getItem('user')).auth_token
+        }
+      }).then(res=>{
+        // buildQuestionsCommentsPage(res.data)
+        window.location.href = domain + `questions/${res.data.id}/comments`
+
+        console.log(res)
+      }).catch(err=>{
+        console.log(err)
+      })
+    
+    })
 }
+

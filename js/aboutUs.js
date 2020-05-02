@@ -1,7 +1,12 @@
 import buildStaffList from "./staff-list.js";
 
 
+
+
+
+
 export default function buildAboutUs(){
+    
     $(".main").empty();
     
 
