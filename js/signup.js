@@ -22,10 +22,16 @@ export default function buildSignup(){
                 </span>
 
                 <div class="wrap-input100 validate-input m-3" >
-                    <input class="input100" type="text" name="fName" id="fName" placeholder="First Name">
+                    <input class="input100" type="text" name="uName" id="uName" placeholder=" Username">
                     <span class="focus-input100-1"></span>
                     <span class="focus-input100-2"></span>
                 </div>
+
+                <div class="wrap-input100 validate-input m-3" >
+                <input class="input100" type="text" name="fName" id="fName" placeholder="First Name">
+                <span class="focus-input100-1"></span>
+                <span class="focus-input100-2"></span>
+            </div>
 
                 <div class="wrap-input100 validate-input m-3" >
                   <input class="input100" id="lName" type="text" name="lName" placeholder="Last Name">
@@ -82,12 +88,13 @@ $("#signup").click((e)=>{
 
 
     e.preventDefault();
-    console.log('rePass:',$("#rePass").val() )
-    console.log('Pass:',$("#pass").val() )
+    // console.log('rePass:',$("#rePass").val() )
+    // console.log('Pass:',$("#pass").val() )
     const data = {
         first_name: $("#fName").val(),
+        username: $("#uName").val(),
         last_name: $("#lName").val(),
-        email: $("#email").val(),
+        email: $("#email").val().toLowerCase(),
         password: $("#pass").val(),
         password_confirmation: $("#rePass").val()
 

@@ -1,13 +1,6 @@
 import buildDashboard from "./user_dashboard.js";
 import buildHomePage from "./home_page.js"
-import buildLogin from "./login.js";
-import buildSignup from "./signup.js";
-import buildProfile from "./profile-page.js";
-import buildStaffList from "./staff-list.js";
-import buildAboutUs from "./aboutUs.js";
-import buildQuestionsPage from "./QuestionsPage.js";
-import buildTestPage from './test_page.js';
-
+import { domain } from "./main.js";
 
 
 
@@ -26,7 +19,8 @@ export default function buildHeader() {
       temp = `<ul class="navbar-nav navbar-right">
 
       <li class="nav-item">
-      <p class="nav-link"> Hello ${JSON.parse(window.localStorage.getItem('user')).user_data.first_name}</p>
+      <a href="/#/profile" class="nav-link" id="profileBtn"> Hello ${JSON.parse(window.localStorage.getItem('user')).user_data.username}</a>
+     
       </li>
         <li class="nav-item">
           <a href="#/home" id="logout" class="nav-link" id="loginNavBtn">Log out</a>
@@ -88,10 +82,7 @@ export default function buildHeader() {
               </li>
             </ul>
             ${adminTemp}
-            <form class="form-inline my-2 my-lg-0">
-              <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-              <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-            </form>
+           
     
             ${temp}
           </div>
@@ -101,7 +92,7 @@ export default function buildHeader() {
         $("#logout").click(()=> {
           window.localStorage.removeItem('user')
             buildHeader()
-            buildHomePage()
+            window.location.href = domain + "home"
         })
 
   

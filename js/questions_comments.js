@@ -104,7 +104,7 @@ export default function buildQuestionsCommentsPage(id){
         //   console.log("dafsghjhkjl")
         let data2 = {
             content: $("#commentText").val(),
-            created_by: JSON.parse(window.localStorage.getItem('user')).user_data.first_name
+            created_by: JSON.parse(window.localStorage.getItem('user')).user_data.username
           }
           console.log(data2)
         axios.post(url,data2, {
