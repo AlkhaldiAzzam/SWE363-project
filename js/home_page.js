@@ -121,7 +121,7 @@ axios.get("https://newsapi.org/v2/top-headlines?category=health&apiKey=fdd83ae81
             <div class="card-body">
               <h5 class="card-title">Test For Covid-19</h5>
               <p class="card-text">Aset of  test composed of selected questions to identify symptoms of Covid-19</p>
-              <a href="/#covid-test/" class="btn btn-primary underCons">Exmaine Your Self</a>
+              <a href="#covid-test/" class="btn btn-primary underCons">Exmaine Your Self</a>
             </div>
           </div>
         </div>
@@ -133,7 +133,7 @@ axios.get("https://newsapi.org/v2/top-headlines?category=health&apiKey=fdd83ae81
               <div class="card-body">
                 <h5 class="card-title">Post a Question</h5>
                 <p class="card-text">Ask any Question that comes to your mind that related to a health matter.</p>
-                <a href="/#postquestion/" class="btn btn-primary" id="PostQuestionBtn">Ask</a>
+                <a href="#postquestion/" class="btn btn-primary" id="PostQuestionBtn">Ask</a>
               </div>
             </div>
       </div>
