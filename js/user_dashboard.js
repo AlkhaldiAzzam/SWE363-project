@@ -21,7 +21,7 @@ export default function buildDashboard(){
                         <div class="card-body">
                           <h5 class="card-title">Update Profile</h5>
                           <p class="card-text">Change your account username , password and medical information.</p>
-                          <a href="#/profile" id="pro-page" class="btn btn-primary">Update</a>
+                          <a href="#profile/" id="pro-page" class="btn btn-primary">Update</a>
                         </div>
                       </div>
                 </div>
@@ -33,7 +33,8 @@ export default function buildDashboard(){
                         <div class="card-body">
                           <h5 class="card-title">Browse Available Services</h5>
                           <p class="card-text">Browse services and features helps to be more healthy.</p>
-                          <button  class="btn btn-primary underCons">Browse</button>
+                          <a href="#home/" id="pro-page" class="btn btn-primary">Explore</a>
+
                         </div>
                       </div>
                 </div>
@@ -45,7 +46,7 @@ export default function buildDashboard(){
                         <div class="card-body">
                           <h5 class="card-title">Post a Question</h5>
                           <p class="card-text">Ask any Question that comes to your mind that related to a health matter.</p>
-                          <a href="#/postquestion" class="btn btn-primary" id="PostQuestionBtn">Ask</a>
+                          <a href="#postquestion/" class="btn btn-primary" id="PostQuestionBtn">Ask</a>
                         </div>
                       </div>
                 </div>
@@ -53,8 +54,7 @@ export default function buildDashboard(){
                 <div class="col-lg-6 col-md-6 col-sm-12">
                     <div class="card" style="width: 18rem;">
                         <div class="card-icon">
-                            <img src="./images/1271366.svg" class="card-img-top" alt="Your Qeustions
-                            ">
+                            <img src="./images/1271366.svg" class="card-img-top" alt="Your Qeustions">
                         </div>
                         <div class="card-body">
                           <h5 class="card-title">Your Questions</h5>
@@ -72,7 +72,7 @@ export default function buildDashboard(){
                         <div class="card-body">
                           <h5 class="card-title">Feedback</h5>
                           <p class="card-text">Some quick feedback can be helpful for us to provide better serivces and high quality content.</p>
-                          <button  class="btn btn-primary" id="feedbackBtn">Write feedback</button>
+                          <a href="#feedback/" class="btn btn-primary" id="feedbackBtn">Write feedback</a>
                         </div>
                       </div>
                 </div>
@@ -81,8 +81,8 @@ export default function buildDashboard(){
     </div>
     `);
 
-    $("#pro-page").click(()=> buildProfile())
-    $("#feedbackBtn").click(()=> buildFeedbackPage())
+    // $("#pro-page").click(()=> buildProfile())
+    // $("#feedbackBtn").click(()=> buildFeedbackPage())
     $(".underCons").click(()=> buildPageUnderCons())
     // $("#PostQuestionBtn").click(()=> buildPostQuestionPage())
 

@@ -5,15 +5,15 @@ export default function buildFooter() {
   <!-- Copyright -->
   <div class="footer-copyright text-center py-3">
        
-        <p>This Page comes to you by:</p>
+        <p>Made with <i class="fas fa-heart"></i> by:</p>
             <div>
-              Azzam Alkhaldi
+            <i class="fas fa-user"></i> Azzam Alkhaldi
             </div>
             <div>
-              Khalid Alghamdi
+            <i class="fas fa-female"></i> Khalid Alghamdi
             </div>
             <div>
-              Ahmed AlZahrani
+            <i class="fas fa-user"></i> Ahmed AlZahrani
             </div>
       </div>
   

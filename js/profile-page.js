@@ -1,4 +1,4 @@
-import { userController } from "./main.js";
+import { userController, domain } from "./main.js";
 import buildHeader from "./header.js";
 
   let user = JSON.parse(window.localStorage.getItem('user'))
@@ -93,9 +93,16 @@ export default function buildProfile(){
     let data = {
       first_name: $("#fName").val(),
         last_name: $("#lName").val(),
-        email: $("#email").val(),
-        password:$("#password").val() ,
-        password_confirmation: $("#passCon").val()
+        email: $("#email").val()
+        
+    }
+
+    let pass = $("#password").val() 
+    
+    let passCon = $("#passCon").val()
+    if(pass && passCon){
+      data.password = pass,
+      data.password_confirmation = passCon
     }
 
     axios.post(url,data,{
@@ -111,7 +118,10 @@ export default function buildProfile(){
       ouser.user_data = res.data
 
       window.localStorage.setItem('user', JSON.stringify(ouser))
+
       buildHeader()
+      window.location.href = domain + "#home/"
+
 
     }).catch(err=>console.log(err))
   })

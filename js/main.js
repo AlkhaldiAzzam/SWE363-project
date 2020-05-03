@@ -17,6 +17,7 @@ import buildTestPage from "./test_page.js";
 import buildPostQuestionPage from "./QuestionPostPage.js";
 import buildQuizPage from "./quiz_page.js";
 import buildQuestionsCommentsPage from "./questions_comments.js";
+import buildFeedbackPage from "./feedback_page.js";
 
 
 
@@ -65,6 +66,8 @@ function hashMeBaby() {
 			case hash == `${minorDomain}/#covid-test/` :	buildQuizPage();
 			break;
 			case hash == `${minorDomain}/#stafflist/` :	buildStaffList();
+			break;
+			case hash == `${minorDomain}/#feedback/` :	buildFeedbackPage();
 			break;
 
 			case hash == `${minorDomain}/#login/` :	buildLogin();

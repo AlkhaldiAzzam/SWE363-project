@@ -27,12 +27,15 @@ export default function buildPostQuestionPage(){
 
         </div>
 
-        <input class="btn btn-primary" type="reset" value="Cancel">
+        <input id="cancelBtn" class="btn btn-primary" type="reset" value="Cancel">
         <button  id="subBtn" class="btn btn-primary" type="submit" >Submit </button>
         
       </form>
       </div>
     `)
+
+    $("#cancelBtn").click(()=>window.location.href = domain + "#questions/")
+
     $("#subBtn").click(()=>{
     
 
@@ -49,7 +52,7 @@ export default function buildPostQuestionPage(){
         }
       }).then(res=>{
         // buildQuestionsCommentsPage(res.data)
-        window.location.href = domain + `#/questions/${res.data.id}/comments`
+        window.location.href = domain + `#questions/comments/id=${res.data.id}`
 
         console.log(res)
       }).catch(err=>{

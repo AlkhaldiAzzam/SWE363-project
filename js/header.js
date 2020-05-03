@@ -20,7 +20,7 @@ export default function buildHeader() {
 
       <li class="nav-item">
 
-      <a href="#profile/" class="nav-link" id="profileBtn"> Hello ${JSON.parse(window.localStorage.getItem('user')).user_data.username}</a>
+      <a href="#dashboard/" class="nav-link" id="profileBtn"> Hello ${JSON.parse(window.localStorage.getItem('user')).user_data.username}</a>
      
       </li>
         <li class="nav-item">
@@ -75,20 +75,19 @@ export default function buildHeader() {
               <li class="nav-item">
                 <a href="#aboutus/" class="nav-link" id="aboutUsNavBtn">About Us</a>
               </li>
-    
-              <li class="nav-item dropdown">
-                <button class="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                  Generate pages
-                </button>
-                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                  <a href="#dashboard/" class="dropdown-item" id="dashBtn">User Dashboard</a>
-                  <a href="#profile/" class="dropdown-item" id="profileBtn">Profile Page</a>
-                  <a href="#questions/" class="dropdown-item" id="QuestionsBtn">Questions Page</a>
-                  <a href="#covid-test/" class="dropdown-item" id="testBtn">Test Page</a>
 
-                  
-                  
+              <li class="nav-item">
+              <a href="#questions/" class="nav-link" id="QuestionsBtn">Questions List</a>
               </li>
+
+
+              <li class="nav-item">
+              <a href="#covid-test/" class="nav-link" id="testBtn">COVID Test </a>
+
+              </li>
+    
+
+
             </ul>
             ${adminTemp}
            

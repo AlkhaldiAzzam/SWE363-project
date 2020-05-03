@@ -1,3 +1,4 @@
+import { domain } from "./main.js";
 
 
 
@@ -49,7 +50,7 @@ $(".main").append(`
 $("#resetBtn").click(()=>{
 
     // console.log("auth token",user.auth_token)
-    const url = "https://swe363-api.herokuapp.com/users/profile/update"
+    const url = "https://swe363-api.herokuapp.com/users/passreset"
 
     let data = {
 
@@ -61,11 +62,7 @@ $("#resetBtn").click(()=>{
       console.log(res)
 
       // userController(res.data)
-      let ouser = JSON.parse(window.localStorage.getItem('user'))
-      ouser.user_data = res.data
-
-      window.localStorage.setItem('user', JSON.stringify(ouser))
-      buildHeader()
+     window.location.href = domain + "#login/"
 
     }).catch(err=>console.log(err))
   })
