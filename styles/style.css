@@ -468,14 +468,6 @@ p.card-text {
       opacity: 1;
     }
   }
-  
-  
-  footer {
-    position: fixed;
-    height: 100px;
-    bottom: 0;
-    width: 100%;
-}
 
 /* .card {
   margin-bottom: 30px;
