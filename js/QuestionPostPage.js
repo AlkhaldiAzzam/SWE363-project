@@ -49,7 +49,7 @@ export default function buildPostQuestionPage(){
         }
       }).then(res=>{
         // buildQuestionsCommentsPage(res.data)
-        window.location.href = domain + `/#questions/${res.data.id}/comments`
+        window.location.href = domain + `#questions/comments/id=${res.data.id}`
 
         console.log(res)
       }).catch(err=>{
