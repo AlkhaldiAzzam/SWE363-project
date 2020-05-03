@@ -1,3 +1,4 @@
+import { domain } from "./main.js";
 
 
 
@@ -26,7 +27,7 @@ export default function buildPassResetEmailPage(){
                     
     
                     <div class="container-login100-form-btn m-t-20">
-                        <button id="subBtn" class="login100-form-btn">
+                        <button id="subBtn2" class="login100-form-btn">
                             Submit
                         </button>
                     </div>
@@ -38,8 +39,8 @@ export default function buildPassResetEmailPage(){
     </div>
     `)
     
-    $("#subBtn").click(()=>{
-
+    $("#subBtn2").click((e)=>{
+        e.preventDefault()
         let data = {
             email: $("#email").val()
         }
@@ -48,6 +49,7 @@ export default function buildPassResetEmailPage(){
 
         axios.post(url, data).then(res=>{
             console.log(res)
+            window.location.href = domain + "#home/"
         }).catch(err=>console.log(err))
 
 
