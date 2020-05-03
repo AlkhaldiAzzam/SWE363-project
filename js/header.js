@@ -20,16 +20,17 @@ export default function buildHeader() {
 
       <li class="nav-item">
 
-      <a href="#profile" class="nav-link" id="profileBtn"> Hello ${JSON.parse(window.localStorage.getItem('user')).user_data.username}</a>
+      <a href="#profile/" class="nav-link" id="profileBtn"> Hello ${JSON.parse(window.localStorage.getItem('user')).user_data.username}</a>
      
       </li>
         <li class="nav-item">
-          <a href="#home/" id="logout" class="nav-link" id="loginNavBtn">Log out</a>
+          <button id="logout" class="nav-link" id="loginNavBtn">Log out</button>
 
         </li> 
       
       </ul>`
 
+      if (JSON.parse(window.localStorage.getItem('user')))
       if (JSON.parse(window.localStorage.getItem('user')).user_data.user_type == "admin"){
         adminTemp = `
         <ul class="navbar-nav navbar-right">
@@ -100,7 +101,7 @@ export default function buildHeader() {
         $("#logout").click(()=> {
           window.localStorage.removeItem('user')
             buildHeader()
-            window.location.href = domain + "home"
+            window.location.href = domain + "#home/"
         })
 
   
