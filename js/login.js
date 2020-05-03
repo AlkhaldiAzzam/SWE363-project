@@ -43,8 +43,8 @@ export default function buildLogin(){
                         Forgot
                     </span>
 
-                    <a  class="txt2 hov1">
-                        Username / Password?
+                    <a href="#pass-reset/" class="txt2 hov1">
+                        Password?
                     </a>
                 </div>
 
