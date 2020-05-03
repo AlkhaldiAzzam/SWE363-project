@@ -117,7 +117,7 @@ $("#signup").click((e)=>{
             // buildHomePage()
             userController(res.data)
 
-            window.location.href = domain + "home"
+            window.location.href = domain + "SWE363-project/#/home"
        
             console.log(JSON.parse(window.localStorage.getItem('user')))
             
