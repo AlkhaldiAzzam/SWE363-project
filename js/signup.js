@@ -69,7 +69,7 @@ export default function buildSignup(){
                       Already have an account?
                     </span>
 
-                    <a href="/login" class="txt2 hov1 " id="login">
+                    <a href="SWE363-project/#/login" class="txt2 hov1 " id="login">
                         Login
                     </a>
                 </div>
@@ -117,7 +117,7 @@ $("#signup").click((e)=>{
             // buildHomePage()
             userController(res.data)
 
-            window.location.href = domain + "home"
+            window.location.href = domain + "SWE363-project/#/home"
        
             console.log(JSON.parse(window.localStorage.getItem('user')))
             
