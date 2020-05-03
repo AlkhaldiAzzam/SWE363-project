@@ -482,7 +482,7 @@ function buildReportPage() {
     <h2 class="text-center m-4">Your Report</h2>
 
       <div class="jumbotron">
-        <h1 class="display-4 m-4">Finally, Azzam</h1>
+        <h1 class="display-4 m-4">Finally, ${JSON.parse(window.localStorage.getItem('user')).user_data.username}</h1>
         <p class="lead"> ${currentQuestion.description}</p>
         <hr class="my-4">
         <h4>You should: ${level}</h4>
