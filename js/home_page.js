@@ -116,24 +116,24 @@ axios.get("https://newsapi.org/v2/top-headlines?category=health&apiKey=fdd83ae81
         <div class="col-lg-6 col-md-12 col-sm-12">
           <div class="card" style="width: 18rem;">
             <div class="card-icon">
-                <img src="/images/Medical-Service.webp" class="card-img-top" alt="Do a test to check up on your self">
+                <img src="./images/Medical-Service.webp" class="card-img-top" alt="Do a test to check up on your self">
             </div>
             <div class="card-body">
               <h5 class="card-title">Test For Covid-19</h5>
               <p class="card-text">Aset of  test composed of selected questions to identify symptoms of Covid-19</p>
-              <a href="/#covid-test/" class="btn btn-primary underCons">Exmaine Your Self</a>
+              <a href="#covid-test/" class="btn btn-primary underCons">Exmaine Your Self</a>
             </div>
           </div>
         </div>
         <div class="col-lg-6 col-md-12 col-sm-12">
           <div class="card" style="width: 18rem;">
               <div class="card-icon">
-                  <img src="/images/iconfinder_new-24_103173.png" class="card-img-top" alt="Post a question that is medical related">
+                  <img src="./images/iconfinder_new-24_103173.png" class="card-img-top" alt="Post a question that is medical related">
               </div>
               <div class="card-body">
                 <h5 class="card-title">Post a Question</h5>
                 <p class="card-text">Ask any Question that comes to your mind that related to a health matter.</p>
-                <a href="/#postquestion/" class="btn btn-primary" id="PostQuestionBtn">Ask</a>
+                <a href="#postquestion/" class="btn btn-primary" id="PostQuestionBtn">Ask</a>
               </div>
             </div>
       </div>

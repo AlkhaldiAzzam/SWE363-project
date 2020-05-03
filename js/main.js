@@ -5,6 +5,8 @@ import buildSignup from "./signup.js";
 import buildProfile from "./profile-page.js";
 import buildStaffList from "./staff-list.js";
 import buildAboutUs from "./aboutUs.js";
+import buildPasswordResetPage from "./passResetPage.js";
+import buildPassResetEmailPage from "./passResetEmailPage.js";
 import buildPageUnderCons from "./pageUnderCons.js";
 
 
@@ -70,6 +72,8 @@ function hashMeBaby() {
 
 			case hash == `${minorDomain}/#signup/` :	buildSignup();
 			break;
+			case hash == `${minorDomain}/#pass-reset/` :	buildPassResetEmailPage();
+			break;
 
 			case hash.includes(`${minorDomain}/#questions/comments`) :
 				let id = hash.slice(hash.indexOf('=')+1)
@@ -92,72 +96,6 @@ window.onhashchange = (e) => {
     // console.log(e);
 }
 
-// let app = Sammy.apps.body
-
-
- 
-	// // var app = Sammy.apps.body;
-	 
-	// app.get(`${minorDomain}#home`, function(context) {
-	// 	buildHomePage()
-	
-	// });
-
-	// app.get(`${minorDomain}#postquestion`, function(context) {
-	// 	buildPostQuestionPage()
-	
-	// });
-	 
-   
-	// app.get(`${minorDomain}#aboutus`, function(context) {
-	// 	buildAboutUs()
-	// });
-
-	// app.get(`${minorDomain}#profile`, function(context) {
-	// 	buildProfile()
-	// });
-
-	
-	// app.get(`${minorDomain}#questions`, function(context) {
-	// 	buildQuestionsPage()
-	// });
-
-
-	// app.get(`${minorDomain}#dashboard`, function(context) {
-	// 	buildDashboard()
-	// });
-
-
-
-	// app.get(`${minorDomain}#stafflist`, function(context) {
-	// 	buildStaffList()
-	// });
-
-
-	// app.get(`${minorDomain}#covid-test`, function(context) {
-	// 	buildQuizPage()
-	// });
-
-	// app.get(`${minorDomain}#questions/:id/comments`, function(context) {
-	// 	buildQuestionsCommentsPage(context.params.id)
-
-	// 	// let queryString = window.location.search;
-	// 	console.log(context.params.id);
-
-		
-	// 	// 
-	// 	});
-
-	// 	app.get(`${minorDomain}#login`, function(context) {
-	// 		buildLogin()
-	// 		});
-
-	// 	app.get(`${minorDomain}#signup`, function(context) {
-	// 		buildSignup()
-	// 		});
-
-// console.log(Sammy.apps.body)
-
 
 function test(params) {
 	
@@ -166,7 +104,6 @@ function test(params) {
 
 
 	buildHeader()
-
 
 
 
@@ -190,7 +127,6 @@ export function userController(newUser){
 // buildStaffList()
 // buildAboutUs()
 // buildTestPage()
-
-
+// buildPasswordResetPage()
 
 
