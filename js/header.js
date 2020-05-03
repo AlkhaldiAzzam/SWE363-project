@@ -66,7 +66,7 @@ export default function buildHeader() {
         <nav class="navbar navbar-expand-lg navbar-light bg-light sticky-top" id="navbar">
           <div class="container-fluid">
 
-            <a class="navbar-brand" href="#/home/"><img width="100px" height="55px" src="images/logo.png" > </a>
+            <a class="navbar-brand" href="#home/"><img width="100px" height="55px" src="images/logo.png" > </a>
     
             <ul class=" navbar-nav">
               <li class="nav-item">
