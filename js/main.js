@@ -17,6 +17,7 @@ import buildQuizPage from "./quiz_page.js";
 import buildQuestionsCommentsPage from "./questions_comments.js";
 
 
+
 export let domain
 
 let minorDomain = ""
