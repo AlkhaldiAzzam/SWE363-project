@@ -1,3 +1,5 @@
+import { domain } from "./main.js";
+
 export default function buildFeedbackPage(){
     $(".main").empty();
 
@@ -35,8 +37,7 @@ export default function buildFeedbackPage(){
     
               </div>
     
-              <input class="btn btn-primary" type="reset" value="Cancel">
-              <input class="btn btn-primary" type="submit" value="Submit">
+              <input id="subBtn" class="btn btn-primary" type="submit" value="Submit">
               
             </form>
     <br><br><br><br><br>
@@ -52,4 +53,10 @@ export default function buildFeedbackPage(){
     
     
     </div>`)
+
+  $("#subBtn").click(()=>{
+    window.location.href = domain + "#home/"
+  })
+
+
 }

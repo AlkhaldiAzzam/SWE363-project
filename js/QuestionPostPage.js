@@ -27,12 +27,15 @@ export default function buildPostQuestionPage(){
 
         </div>
 
-        <input class="btn btn-primary" type="reset" value="Cancel">
+        <input id="cancelBtn" class="btn btn-primary" type="reset" value="Cancel">
         <button  id="subBtn" class="btn btn-primary" type="submit" >Submit </button>
         
       </form>
       </div>
     `)
+
+    $("#cancelBtn").click(()=>window.location.href = domain + "#questions/")
+
     $("#subBtn").click(()=>{
     
 
