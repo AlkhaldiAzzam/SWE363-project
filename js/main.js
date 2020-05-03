@@ -21,12 +21,13 @@ import buildQuestionsCommentsPage from "./questions_comments.js";
 export let domain
 
 let minorDomain = ""
+
 if(location.host =='localhost:5500' )
 	domain = "http://localhost:5500/"
 
 	else {
 		domain = "https://alkhaldiazzam.github.io/SWE363-project/"
-		minorDomain = "SWE363-project/"
+		minorDomain = "/SWE363-project/"
 	}
 
 
@@ -37,32 +38,37 @@ if(location.host =='localhost:5500' )
 
 function hashMeBaby() {
 
-			let hash = location.hash
+			let hash = location.pathname+location.hash
+
+			console.log(hash)
+			console.log(`${minorDomain}#home`)
+			console.log(minorDomain)
+			
     // handle haschange event here
 	switch (true) {
-			case hash == `${minorDomain}#home` :{	
+			case hash == `${minorDomain}#home/` :{	
 			buildHomePage();
 			}
 			break;
-			case hash == `${minorDomain}#postquestion` :	buildQuestionsPage();
+			case hash == `${minorDomain}#postquestion/` :	buildQuestionsPage();
 			break;
-			case hash == `${minorDomain}#aboutus` :	buildAboutUs();
+			case hash == `${minorDomain}#aboutus/` :	buildAboutUs();
 			break;
-			case hash == `${minorDomain}#profile` :	buildProfile();
+			case hash == `${minorDomain}#profile/` :	buildProfile();
 			break;
-			case hash == `${minorDomain}#questions` :	buildQuestionsPage();
+			case hash == `${minorDomain}#questions/` :	buildQuestionsPage();
 			break;
-			case hash == `${minorDomain}#dashboard` :	buildDashboard();
+			case hash == `${minorDomain}#dashboard/` :	buildDashboard();
 			break;
-			case hash == `${minorDomain}#covid-test` :	buildQuizPage();
+			case hash == `${minorDomain}#covid-test/` :	buildQuizPage();
 			break;
-			case hash == `${minorDomain}#stafflist` :	buildStaffList();
-			break;
-
-			case hash == `${minorDomain}#login` :	buildLogin();
+			case hash == `${minorDomain}#stafflist/` :	buildStaffList();
 			break;
 
-			case hash == `${minorDomain}#signup` :	buildSignup();
+			case hash == `${minorDomain}#login/` :	buildLogin();
+			break;
+
+			case hash == `${minorDomain}#signup/` :	buildSignup();
 			break;
 
 			case hash.includes(`${minorDomain}#questions/comments`) :
