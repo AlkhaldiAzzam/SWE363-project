@@ -19,11 +19,13 @@ export default function buildHeader() {
       temp = `<ul class="navbar-nav navbar-right">
 
       <li class="nav-item">
-      <a href="/SWE363-project/#/profile" class="nav-link" id="profileBtn"> Hello ${JSON.parse(window.localStorage.getItem('user')).user_data.username}</a>
+
+      <a href="/SWE363-project/#profile" class="nav-link" id="profileBtn"> Hello ${JSON.parse(window.localStorage.getItem('user')).user_data.username}</a>
      
       </li>
         <li class="nav-item">
-          <a href="/SWE363-project/#/home/" id="logout" class="nav-link" id="loginNavBtn">Log out</a>
+          <a href="/SWE363-project/#home/" id="logout" class="nav-link" id="loginNavBtn">Log out</a>
+
         </li> 
       
       </ul>`
@@ -34,7 +36,9 @@ export default function buildHeader() {
 
       
         <li class="nav-item">
-                  <a href="/SWE363-project/#/stafflist/" id="admin-dashboard" class="nav-link" id="loginNavBtn">Admin Dashboard</a>
+
+                  <a href="/SWE363-project/#stafflist/" id="admin-dashboard" class="nav-link" id="loginNavBtn">Admin Dashboard</a>
+
         </li> 
       
       </ul>
@@ -45,10 +49,12 @@ export default function buildHeader() {
 
       temp = `<ul class="navbar-nav navbar-right">
       <li class="nav-item">
-        <a href="/SWE363-project/#/login/" class="nav-link" id="loginNavBtn">Login</a>
+
+        <a href="/SWE363-project/#login/" class="nav-link" id="loginNavBtn">Login</a>
       </li> 
       <li class="nav-item">
-        <a href="/SWE363-project/#/signup/" class="nav-link" id="signupNavBtn">Sign up</a>
+        <a href="/SWE363-project/#signup/" class="nav-link" id="signupNavBtn">Sign up</a>
+
       </li>
     </ul>`
     }
@@ -58,14 +64,15 @@ export default function buildHeader() {
         $("#header").append(`
         <nav class="navbar navbar-expand-lg navbar-light bg-light sticky-top" id="navbar">
           <div class="container-fluid">
+
             <a class="navbar-brand" href="SWE363-project/#/home/"><img width="100px" height="55px" src="images/logo.png" > </a>
     
             <ul class=" navbar-nav">
               <li class="nav-item">
-                <a href="/SWE363-project/#/home/" class="nav-link" id='homeNavBtn'>Home</a>
+                <a href="/SWE363-project/#home/" class="nav-link" id='homeNavBtn'>Home</a>
               </li>
               <li class="nav-item">
-                <a href="/SWE363-project/#/aboutus/" class="nav-link" id="aboutUsNavBtn">About Us</a>
+                <a href="/SWE363-project/#aboutus/" class="nav-link" id="aboutUsNavBtn">About Us</a>
               </li>
     
               <li class="nav-item dropdown">
@@ -73,10 +80,11 @@ export default function buildHeader() {
                   Generate pages
                 </button>
                 <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                  <a href="/SWE363-project/#/dashboard/" class="dropdown-item" id="dashBtn">User Dashboard</a>
-                  <a href="/SWE363-project/#/profile/" class="dropdown-item" id="profileBtn">Profile Page</a>
-                  <a href="/SWE363-project/#/questions/" class="dropdown-item" id="QuestionsBtn">Questions Page</a>
-                  <a href="/SWE363-project/#/covid-test/" class="dropdown-item" id="testBtn">Test Page</a>
+                  <a href="/SWE363-project/#dashboard/" class="dropdown-item" id="dashBtn">User Dashboard</a>
+                  <a href="/SWE363-project/#profile/" class="dropdown-item" id="profileBtn">Profile Page</a>
+                  <a href="/SWE363-project/#questions/" class="dropdown-item" id="QuestionsBtn">Questions Page</a>
+                  <a href="/SWE363-project/#covid-test/" class="dropdown-item" id="testBtn">Test Page</a>
+
                   
                   
               </li>
@@ -103,17 +111,6 @@ export default function buildHeader() {
 
 
 
-
-// $("#homeNavBtn").click(()=> buildHomePage())
-// $("#loginNavBtn").click(()=> buildLogin())
-// $("#signupNavBtn").click(()=> buildSignup())
-// $("#aboutUsNavBtn").click(()=> buildAboutUs())
-// $("#testBtn").click(()=> buildTestPage())
-// $("#QuestionsBtn").click(()=> buildQuestionsPage())
-
-// $("#dashBtn").click(()=> buildDashboard())
-// $("#staffBtn").click(()=> buildStaffList())
-// $("#profileBtn").click(()=> buildProfile())
 
 
 

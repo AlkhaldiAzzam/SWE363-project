@@ -19,13 +19,15 @@ import buildQuestionsCommentsPage from "./questions_comments.js";
 
 
 export let domain
+
+let minorDomain = ""
 if(location.href.includes('localhost'))
 	domain = "http://localhost:5500/"
 
-	else 
+	else {
 		domain = "https://alkhaldiazzam.github.io/SWE363-project/"
-
-
+		minorDomain = "SWE363-project/"
+	}
 console.log(window.localStorage)
 
 // export let user = {}
@@ -36,71 +38,79 @@ console.log(window.localStorage)
  
 	var app = Sammy.apps.body;
 	 
-	app.get('SWE363-project/#/home', function(context) {
+
+	app.route(`${minorDomain}#home`, function(context) {
+
 		buildHomePage()
-	console.log("You're in the Main route");
+	
 	});
 
-	app.get('SWE363-project/#/postquestion', function(context) {
+
+	app.route(`${minorDomain}#postquestion`, function(context) {
+
 		buildPostQuestionPage()
-	console.log("You're in the Main route");
+	
 	});
 	 
    
-	app.get('SWE363-project/#/aboutus', function(context) {
+
+	app.route(`${minorDomain}#aboutus`, function(context) {
+
 		buildAboutUs()
-	console.log("You're in the About us route");
 	});
 
-	app.get('SWE363-project/#/profile', function(context) {
+
+	app.route(`${minorDomain}#profile`, function(context) {
+
 		buildProfile()
-	console.log("You're in the About us route");
 	});
 
 	
-	app.get('SWE363-project/#/questions', function(context) {
+
+	app.route(`${minorDomain}#questions`, function(context) {
+
 		buildQuestionsPage()
-	console.log("You're in the About us route");
 	});
 
 
-	app.get('SWE363-project/#/dashboard', function(context) {
+	app.route(`${minorDomain}#dashboard`, function(context) {
+
 		buildDashboard()
-	console.log("You're in the About us route");
 	});
 
 
 
-	app.get('SWE363-project/#/stafflist', function(context) {
+
+	app.route(`${minorDomain}#stafflist`, function(context) {
+
 		buildStaffList()
-	console.log("You're in the About us route");
 	});
 
 
-	app.get('SWE363-project/#/covid-test', function(context) {
+
+	app.route(`${minorDomain}#covid-test`, function(context) {
+
 		buildQuizPage()
-	console.log("You're in the About us route");
 	});
 
-	app.get(`SWE363-project/#/questions/:id/comments`, function(context) {
+	app.route(`${minorDomain}#questions/:id/comments`, function(context) {
+
 		buildQuestionsCommentsPage(context.params.id)
 
 		// let queryString = window.location.search;
 		console.log(context.params.id);
 
 		
-		// console.log("You're in the Main route");
+		// 
 		});
 
-		app.get('/login', function(context) {
+		app.route(`${minorDomain}#login`, function(context) {
 			buildLogin()
-		console.log("You're in the About us route");
-		});
+			});
 
-		app.get('/signup', function(context) {
+		app.route(`${minorDomain}#signup`, function(context) {
 			buildSignup()
-		console.log("You're in the About us route");
-		});
+			});
 
 // console.log(Sammy.apps.body)
 

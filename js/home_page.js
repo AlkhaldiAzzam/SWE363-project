@@ -90,7 +90,18 @@ axios.get("https://newsapi.org/v2/top-headlines?category=health&apiKey=fdd83ae81
       
       // console.log(news)
 
+      let covidData
+      axios.get("https://corona-virus-stats.herokuapp.com/api/v1/cases/general-stats").then(res=>{
+      console.log(res)
+      covidData = {
+        totalCases : res.data.data.total_cases,
+        currentCases: res.data.data.currently_infected,
+        totalDeaths: res.data.data.death_cases,
+        totalRecovered: res.data.data.recovery_cases
+      }
 
+
+    
 
 
     $(".main").append(`
@@ -105,9 +116,7 @@ axios.get("https://newsapi.org/v2/top-headlines?category=health&apiKey=fdd83ae81
         <div class="col-lg-6 col-md-12 col-sm-12">
           <div class="card" style="width: 18rem;">
             <div class="card-icon">
-
-                <img src="./images/Medical-Service.webp" class="card-img-top" alt="Do a test to check up on your self">
-
+                <img src="/images/Medical-Service.webp" class="card-img-top" alt="Do a test to check up on your self">
             </div>
             <div class="card-body">
               <h5 class="card-title">Test For Covid-19</h5>
@@ -119,7 +128,7 @@ axios.get("https://newsapi.org/v2/top-headlines?category=health&apiKey=fdd83ae81
         <div class="col-lg-6 col-md-12 col-sm-12">
           <div class="card" style="width: 18rem;">
               <div class="card-icon">
-                  <img src="../images/iconfinder_new-24_103173.png" class="card-img-top" alt="Post a question that is medical related">
+                  <img src="/images/iconfinder_new-24_103173.png" class="card-img-top" alt="Post a question that is medical related">
               </div>
               <div class="card-body">
                 <h5 class="card-title">Post a Question</h5>
@@ -139,18 +148,22 @@ axios.get("https://newsapi.org/v2/top-headlines?category=health&apiKey=fdd83ae81
     <!-- Jumbotron Header -->
     <div class="jumbotron counter">
           <div>
-            <h1 class="count-text-header">Coronavirus Cases:</h1>
-            <h1 id="count" class="count-value-header"><!-- Placeholder For the Counter -->7,000,000,000</h1>
+            <h1 class="count-text-header">COVID-19 total Cases:</h1>
+            <h1 id="count" class="count-value-header"><!-- Placeholder For the Counter -->${covidData.totalCases}</h1>
+          </div>
+          <div class="m-5">
+            <h1 class="count-text-header">COVID-19 current Cases:</h1>
+            <h1 id="count" class="count-value-header"><!-- Placeholder For the Counter -->${covidData.currentCases}</h1>
           </div>
           <br>
-          <div>
+          <div class="d-flex justify-content-around">
             <div class="deaths">
               <h2 class="deaths-counter">Deaths:</h2>
-              <h2><!-- Placeholder For the Counter -->7,000,000,000,000,000</h2>
+              <h2><!-- Placeholder For the Counter -->${covidData.totalDeaths}</h2>
             </div>
             <div class="recovered">
               <h2 class="recoverd-counter">Recovered:</h2>
-              <h2><!-- Placeholder For the Counter -->20,000,000,000</h2>
+              <h2><!-- Placeholder For the Counter -->${covidData.totalRecovered}</h2>
             </div>
           </div>
           
@@ -159,8 +172,8 @@ axios.get("https://newsapi.org/v2/top-headlines?category=health&apiKey=fdd83ae81
 
 
       <!-- news -->
-      <div class="container-fluid">
-        <h2>top news</h4>
+      <div class=" jumbotron container-fluid">
+        <h1 class="m-5">top news</h4>
         <div class="row m-4">
 
 
@@ -331,6 +344,8 @@ axios.get("https://newsapi.org/v2/top-headlines?category=health&apiKey=fdd83ae81
     </div>
   </div>
     `)
+
+  })
     }).catch(err=> console.log(err))
 
 
