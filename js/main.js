@@ -40,32 +40,32 @@ function hashMeBaby() {
 			let hash = location.hash
     // handle haschange event here
 	switch (true) {
-			case hash == `${minorDomain}#home` :{	
+			case hash == `SWE363-project/#home` :{	
 			buildHomePage();
 			}
 			break;
-			case hash == `${minorDomain}#postquestion` :	buildQuestionsPage();
+			case hash == `SWE363-project/#postquestion` :	buildQuestionsPage();
 			break;
-			case hash == `${minorDomain}#aboutus` :	buildAboutUs();
+			case hash == `SWE363-project/#aboutus` :	buildAboutUs();
 			break;
-			case hash == `${minorDomain}#profile` :	buildProfile();
+			case hash == `SWE363-project/#profile` :	buildProfile();
 			break;
-			case hash == `${minorDomain}#questions` :	buildQuestionsPage();
+			case hash == `SWE363-project/#questions` :	buildQuestionsPage();
 			break;
-			case hash == `${minorDomain}#dashboard` :	buildDashboard();
+			case hash == `SWE363-project/#dashboard` :	buildDashboard();
 			break;
-			case hash == `${minorDomain}#covid-test` :	buildQuizPage();
+			case hash == `SWE363-project/#covid-test` :	buildQuizPage();
 			break;
-			case hash == `${minorDomain}#stafflist` :	buildStaffList();
-			break;
-
-			case hash == `${minorDomain}#login` :	buildLogin();
+			case hash == `SWE363-project/#stafflist` :	buildStaffList();
 			break;
 
-			case hash == `${minorDomain}#signup` :	buildSignup();
+			case hash == `SWE363-project/#login` :	buildLogin();
 			break;
 
-			case hash.includes(`${minorDomain}#questions/comments`) :
+			case hash == `SWE363-project/#signup` :	buildSignup();
+			break;
+
+			case hash.includes(`SWE363-project/#questions/comments`) :
 				let id = hash.slice(hash.indexOf('=')+1)
 				buildQuestionsCommentsPage(id)
 				console.log(id)
