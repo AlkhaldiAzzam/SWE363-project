@@ -36,53 +36,53 @@ console.log(window.localStorage)
  
 	var app = Sammy.apps.body;
 	 
-	app.get('/#/home', function(context) {
+	app.get('SWE363-project/#/home', function(context) {
 		buildHomePage()
 	console.log("You're in the Main route");
 	});
 
-	app.get('/#/postquestion', function(context) {
+	app.get('SWE363-project/#/postquestion', function(context) {
 		buildPostQuestionPage()
 	console.log("You're in the Main route");
 	});
 	 
    
-	app.get('/#/aboutus', function(context) {
+	app.get('SWE363-project/#/aboutus', function(context) {
 		buildAboutUs()
 	console.log("You're in the About us route");
 	});
 
-	app.get('/#/profile', function(context) {
+	app.get('SWE363-project/#/profile', function(context) {
 		buildProfile()
 	console.log("You're in the About us route");
 	});
 
 	
-	app.get('/#/questions', function(context) {
+	app.get('SWE363-project/#/questions', function(context) {
 		buildQuestionsPage()
 	console.log("You're in the About us route");
 	});
 
 
-	app.get('/#/dashboard', function(context) {
+	app.get('SWE363-project/#/dashboard', function(context) {
 		buildDashboard()
 	console.log("You're in the About us route");
 	});
 
 
 
-	app.get('/#/stafflist', function(context) {
+	app.get('SWE363-project/#/stafflist', function(context) {
 		buildStaffList()
 	console.log("You're in the About us route");
 	});
 
 
-	app.get('/#/covid-test', function(context) {
+	app.get('SWE363-project/#/covid-test', function(context) {
 		buildQuizPage()
 	console.log("You're in the About us route");
 	});
 
-	app.get(`/#/questions/:id/comments`, function(context) {
+	app.get(`SWE363-project/#/questions/:id/comments`, function(context) {
 		buildQuestionsCommentsPage(context.params.id)
 
 		// let queryString = window.location.search;
