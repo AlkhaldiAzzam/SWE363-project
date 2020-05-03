@@ -40,38 +40,38 @@ function hashMeBaby() {
 
 			let hash = location.pathname+location.hash
 
-			console.log(hash)
-			console.log(`${minorDomain}#home`)
+			console.log(hash, "what u have")
+			console.log(`${minorDomain}/#postquestion/` ,"what u aim for")
 			console.log(minorDomain)
 			
     // handle haschange event here
 	switch (true) {
-			case hash == `${minorDomain}#home/` :{	
+			case hash == `${minorDomain}/#home/` :{	
 			buildHomePage();
 			}
 			break;
-			case hash == `${minorDomain}#postquestion/` :	buildQuestionsPage();
+			case hash == `${minorDomain}/#postquestion/` :	buildPostQuestionPage();
 			break;
-			case hash == `${minorDomain}#aboutus/` :	buildAboutUs();
+			case hash == `${minorDomain}/#aboutus/` :	buildAboutUs();
 			break;
-			case hash == `${minorDomain}#profile/` :	buildProfile();
+			case hash == `${minorDomain}/#profile/` :	buildProfile();
 			break;
-			case hash == `${minorDomain}#questions/` :	buildQuestionsPage();
+			case hash == `${minorDomain}/#questions/` :	buildQuestionsPage();
 			break;
-			case hash == `${minorDomain}#dashboard/` :	buildDashboard();
+			case hash == `${minorDomain}/#dashboard/` :	buildDashboard();
 			break;
-			case hash == `${minorDomain}#covid-test/` :	buildQuizPage();
+			case hash == `${minorDomain}/#covid-test/` :	buildQuizPage();
 			break;
-			case hash == `${minorDomain}#stafflist/` :	buildStaffList();
-			break;
-
-			case hash == `${minorDomain}#login/` :	buildLogin();
+			case hash == `${minorDomain}/#stafflist/` :	buildStaffList();
 			break;
 
-			case hash == `${minorDomain}#signup/` :	buildSignup();
+			case hash == `${minorDomain}/#login/` :	buildLogin();
 			break;
 
-			case hash.includes(`${minorDomain}#questions/comments`) :
+			case hash == `${minorDomain}/#signup/` :	buildSignup();
+			break;
+
+			case hash.includes(`${minorDomain}/#questions/comments`) :
 				let id = hash.slice(hash.indexOf('=')+1)
 				buildQuestionsCommentsPage(id)
 				console.log(id)

@@ -31,7 +31,7 @@ export default function buildAboutUs(){
               <div class="col-lg-4 col-md-6 col-sm-12">
                   <div class="card" style="width: 18rem;">
                       <div class="card-icon">
-                          <img src="../images/1197137-200.png" class="card-img-top" alt="Browse Available Services">
+                          <img src="./images/1197137-200.png" class="card-img-top" alt="Browse Available Services">
                       </div>
                       <div class="card-body">
                         <h5 class="card-title">HS Medical staff</h5>
@@ -43,7 +43,7 @@ export default function buildAboutUs(){
               <div class="col-lg-4 col-md-6 col-sm-12">
                   <div class="card" style="width: 18rem;">
                       <div class="card-icon">
-                          <img src="../images/stats.png" class="card-img-top" alt="Browse Available Services">
+                          <img src="./images/stats.png" class="card-img-top" alt="Browse Available Services">
                       </div>
                       <div class="card-body">
                         <h5 class="card-title">Latest Stats</h5>
@@ -55,7 +55,7 @@ export default function buildAboutUs(){
               <div class="col-lg-4 col-md-6 col-sm-12">
                   <div class="card" style="width: 18rem;">
                       <div class="card-icon">
-                          <img src="../images/Search-Services.png" class="card-img-top" alt="Browse Available Services">
+                          <img src="./images/Search-Services.png" class="card-img-top" alt="Browse Available Services">
                       </div>
                       <div class="card-body">
                         <h5 class="card-title">Browse Available Services</h5>

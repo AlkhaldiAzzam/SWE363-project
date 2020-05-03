@@ -94,7 +94,7 @@ function login(data){
       
         userController(res.data)
         // buildHeader()
-        window.location.href = domain +"SWE363-project/#/home"
+        window.location.href = domain +"#home/"
         
     }).catch(err=> {
         $("#alert").removeClass("d-none")
