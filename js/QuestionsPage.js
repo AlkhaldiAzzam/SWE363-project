@@ -87,7 +87,7 @@ export default function buildQuestionsPage(){
 
         console.log(q)
 
-        window.location.href = domain + `#/questions/${q}/comments`
+        window.location.href = domain + `#questions/comments/id=${q}`
 
           
 

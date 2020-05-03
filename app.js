@@ -2,11 +2,11 @@
 
 
  
-    var app = Sammy('body');
+    // var app = Sammy('body');
      
-    $(document).ready(function() {
+    // $(document).ready(function() {
 
         
-    app.run('#home');
-    });
+    // app.run('#home');
+    // });
      

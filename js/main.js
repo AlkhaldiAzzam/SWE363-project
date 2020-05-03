@@ -21,80 +21,134 @@ import buildQuestionsCommentsPage from "./questions_comments.js";
 export let domain
 
 let minorDomain = ""
-if(location.href.includes('localhost'))
+if(location.host =='localhost:5500' )
 	domain = "http://localhost:5500/"
 
 	else {
 		domain = "https://alkhaldiazzam.github.io/SWE363-project/"
 		minorDomain = "SWE363-project/"
 	}
-console.log(window.localStorage)
+
 
 // export let user = {}
+
+
+
+
+function hashMeBaby() {
+
+			let hash = location.hash
+    // handle haschange event here
+	switch (true) {
+			case hash == `${minorDomain}#home` :{	
+			buildHomePage();
+			}
+			break;
+			case hash == `${minorDomain}#postquestion` :	buildQuestionsPage();
+			break;
+			case hash == `${minorDomain}#aboutus` :	buildAboutUs();
+			break;
+			case hash == `${minorDomain}#profile` :	buildProfile();
+			break;
+			case hash == `${minorDomain}#questions` :	buildQuestionsPage();
+			break;
+			case hash == `${minorDomain}#dashboard` :	buildDashboard();
+			break;
+			case hash == `${minorDomain}#covid-test` :	buildQuizPage();
+			break;
+			case hash == `${minorDomain}#stafflist` :	buildStaffList();
+			break;
+
+			case hash == `${minorDomain}#login` :	buildLogin();
+			break;
+
+			case hash == `${minorDomain}#signup` :	buildSignup();
+			break;
+
+			case hash.includes(`${minorDomain}#questions/comments`) :
+				let id = hash.slice(hash.indexOf('=')+1)
+				buildQuestionsCommentsPage(id)
+				console.log(id)
+				
+			break;
+
+			default : console.log('meh..')
+
+			
+		}}
+
+		hashMeBaby()
+window.onhashchange = (e) => {
+
+	let hash = location.hash
+    // handle haschange event here
+	hashMeBaby()
+    // console.log(e);
+}
 
 // let app = Sammy.apps.body
 
 
  
-	var app = Sammy.apps.body;
+	// // var app = Sammy.apps.body;
 	 
-	app.route(`${minorDomain}#home`, function(context) {
-		buildHomePage()
+	// app.get(`${minorDomain}#home`, function(context) {
+	// 	buildHomePage()
 	
-	});
+	// });
 
-	app.route(`${minorDomain}#postquestion`, function(context) {
-		buildPostQuestionPage()
+	// app.get(`${minorDomain}#postquestion`, function(context) {
+	// 	buildPostQuestionPage()
 	
-	});
+	// });
 	 
    
-	app.route(`${minorDomain}#aboutus`, function(context) {
-		buildAboutUs()
-	});
+	// app.get(`${minorDomain}#aboutus`, function(context) {
+	// 	buildAboutUs()
+	// });
 
-	app.route(`${minorDomain}#profile`, function(context) {
-		buildProfile()
-	});
+	// app.get(`${minorDomain}#profile`, function(context) {
+	// 	buildProfile()
+	// });
 
 	
-	app.route(`${minorDomain}#questions`, function(context) {
-		buildQuestionsPage()
-	});
+	// app.get(`${minorDomain}#questions`, function(context) {
+	// 	buildQuestionsPage()
+	// });
 
 
-	app.route(`${minorDomain}#dashboard`, function(context) {
-		buildDashboard()
-	});
+	// app.get(`${minorDomain}#dashboard`, function(context) {
+	// 	buildDashboard()
+	// });
 
 
 
-	app.route(`${minorDomain}#stafflist`, function(context) {
-		buildStaffList()
-	});
+	// app.get(`${minorDomain}#stafflist`, function(context) {
+	// 	buildStaffList()
+	// });
 
 
-	app.route(`${minorDomain}#covid-test`, function(context) {
-		buildQuizPage()
-	});
+	// app.get(`${minorDomain}#covid-test`, function(context) {
+	// 	buildQuizPage()
+	// });
 
-	app.route(`${minorDomain}#questions/:id/comments`, function(context) {
-		buildQuestionsCommentsPage(context.params.id)
+	// app.get(`${minorDomain}#questions/:id/comments`, function(context) {
+	// 	buildQuestionsCommentsPage(context.params.id)
 
-		// let queryString = window.location.search;
-		console.log(context.params.id);
+	// 	// let queryString = window.location.search;
+	// 	console.log(context.params.id);
 
 		
-		// 
-		});
+	// 	// 
+	// 	});
 
-		app.route(`${minorDomain}#login`, function(context) {
-			buildLogin()
-			});
+	// 	app.get(`${minorDomain}#login`, function(context) {
+	// 		buildLogin()
+	// 		});
 
-		app.route(`${minorDomain}#signup`, function(context) {
-			buildSignup()
-			});
+	// 	app.get(`${minorDomain}#signup`, function(context) {
+	// 		buildSignup()
+	// 		});
 
 // console.log(Sammy.apps.body)
 
