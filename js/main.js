@@ -46,6 +46,7 @@ function hashMeBaby() {
 			
     // handle haschange event here
 	switch (true) {
+
 			case hash == `${minorDomain}#home/` :{	
 			buildHomePage();
 			}
@@ -69,9 +70,10 @@ function hashMeBaby() {
 			break;
 
 			case hash == `${minorDomain}#signup/` :	buildSignup();
+
 			break;
 
-			case hash.includes(`${minorDomain}#questions/comments`) :
+			case hash.includes(`SWE363-project/#questions/comments`) :
 				let id = hash.slice(hash.indexOf('=')+1)
 				buildQuestionsCommentsPage(id)
 				console.log(id)
