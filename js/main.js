@@ -27,7 +27,7 @@ if(location.host =='localhost:5500' )
 
 	else {
 		domain = "https://alkhaldiazzam.github.io/SWE363-project/"
-		minorDomain = "/SWE363-project/"
+		minorDomain = "/SWE363-project"
 	}
 
 
