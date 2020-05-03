@@ -40,7 +40,7 @@ function hashMeBaby() {
 			let hash = location.hash
     // handle haschange event here
 	switch (true) {
-			case hash == `SWE363-project/#home` :{	
+			case hash == location.pathname+location.hash :{	
 			buildHomePage();
 			}
 			break;
