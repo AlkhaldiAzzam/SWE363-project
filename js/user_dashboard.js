@@ -13,7 +13,7 @@ export default function buildDashboard(){
     <div class="container">
         <div class="jumbotron">
             <div class="row">
-                <div class="col-lg-4 col-md-6 col-sm-12">
+                <div class="col-lg-6 col-md-6 col-sm-12">
                     <div class="card" style="width: 18rem;">
                         <div class="card-icon">
                             <img src="./images/Update-Profile.png" class="card-img-top" alt="Update Profile">
@@ -25,19 +25,7 @@ export default function buildDashboard(){
                         </div>
                       </div>
                 </div>
-                <div class="col-lg-4 col-md-6 col-sm-12">
-                    <div class="card" style="width: 18rem;">
-                        <div class="card-icon">
-                            <img src="./images/Search-Services.png" class="card-img-top" alt="Browse Available Services">
-                        </div>
-                        <div class="card-body">
-                          <h5 class="card-title">Browse Available Services</h5>
-                          <p class="card-text">Browse services and features helps to be more healthy.</p>
-                          <button  class="btn btn-primary underCons">Browse</button>
-                        </div>
-                      </div>
-                </div>
-                <div class="col-lg-4 col-md-6 col-sm-12">
+                <div class="col-lg-6 col-md-6 col-sm-12">
                     <div class="card" style="width: 18rem;">
                         <div class="card-icon">
                             <img src="./images/iconfinder_new-24_103173.png" class="card-img-top" alt="Post a question that is medical related">
@@ -101,3 +89,17 @@ export default function buildDashboard(){
                         </div>
                       </div>
                 </div> */}
+
+
+                // <div class="col-lg-4 col-md-6 col-sm-12">
+                //     <div class="card" style="width: 18rem;">
+                //         <div class="card-icon">
+                //             <img src="./images/Search-Services.png" class="card-img-top" alt="Browse Available Services">
+                //         </div>
+                //         <div class="card-body">
+                //           <h5 class="card-title">Browse Available Services</h5>
+                //           <p class="card-text">Browse services and features helps to be more healthy.</p>
+                //           <button  class="btn btn-primary underCons">Browse</button>
+                //         </div>
+                //       </div>
+                // </div>
