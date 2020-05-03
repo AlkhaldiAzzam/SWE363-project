@@ -34,7 +34,7 @@ $(".main").append(`
         </div>
 
             <div class="container-login100-form-btn m-t-20">
-                <button id="login" class="login100-form-btn">
+                <button id="resetBtn" class="login100-form-btn">
                     Reset Password
                 </button>
             </div>
@@ -46,7 +46,29 @@ $(".main").append(`
 </div>
 `)
 
+$("#resetBtn").click(()=>{
 
+    // console.log("auth token",user.auth_token)
+    const url = "https://swe363-api.herokuapp.com/users/profile/update"
+
+    let data = {
+
+        password:$("#pass").val() ,
+        password_confirmation: $("#rePass").val()
+    }
+
+    axios.post(url,data).then(res=>{
+      console.log(res)
+
+      // userController(res.data)
+      let ouser = JSON.parse(window.localStorage.getItem('user'))
+      ouser.user_data = res.data
+
+      window.localStorage.setItem('user', JSON.stringify(ouser))
+      buildHeader()
+
+    }).catch(err=>console.log(err))
+  })
 
 
 }

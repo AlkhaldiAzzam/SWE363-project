@@ -82,6 +82,13 @@ function hashMeBaby() {
 				
 			break;
 
+			case hash.includes(`${minorDomain}/#passreset`) :
+				let email = hash.slice(hash.indexOf('=')+1)
+				buildPasswordResetPage(email)
+				console.log(email)
+				
+			break;
+
 			default : console.log('meh..')
 
 			

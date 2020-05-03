@@ -40,7 +40,15 @@ export default function buildPassResetEmailPage(){
     
     $("#subBtn").click(()=>{
 
-        
+        let data = {
+            email: $("#email").val()
+        }
+
+        let url = "https://swe363-api.herokuapp.com/users/passresetemail"
+
+        axios.post(url, data).then(res=>{
+            console.log(res)
+        }).catch(err=>console.log(err))
 
 
     })
