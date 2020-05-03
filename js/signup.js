@@ -14,7 +14,6 @@ export default function buildSignup(){
     <div class="container-login100">
         <div class="wrap-login100 p-l-55 p-r-55 p-t-65 p-b-50">
         <div class="alert alert-danger d-none" id="alert" role="alert">
-                 Please check your passwords!
             </div>
             <form onsubmit="return" id="signup-form" class="login100-form validate-form" >
                 <span class="login100-form-title p-b-33">
@@ -105,10 +104,8 @@ $("#signup").click((e)=>{
     if (ValidateEmail(data.email)){
     const url = "https://swe363-api.herokuapp.com/signup"
 
-    if(data.password != data.password_confirmation)
-    $("#alert").removeClass("d-none")
 
-    else{
+    
 
         
         axios.post(url, data).then(res=>{
@@ -117,14 +114,19 @@ $("#signup").click((e)=>{
             // buildHomePage()
             userController(res.data)
 
-            window.location.href = domain + "SWE363-project/#/home"
+            window.location.href = domain + "#home"
        
             console.log(JSON.parse(window.localStorage.getItem('user')))
             
-        }).catch(err=> console.log(err))
+        }).catch(err=> {
+            $("#alert").removeClass('d-none')
+            $("#alert").html(err.response.data.message)
+            console.log(err.response.data.message)
+        
+        })
         
     }
-    }
+    
 })
 
 }

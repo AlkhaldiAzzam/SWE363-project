@@ -183,11 +183,11 @@ axios.get("https://newsapi.org/v2/top-headlines?category=health&apiKey=fdd83ae81
         <div class="container">
           <div id="demo" class="carousel slide" data-ride="carousel">
             <!-- Indicators -->
-            <ul class="carousel-indicators">
+            <ol class="carousel-indicators">
               <li data-target="#demo" data-slide-to="0" class="active"></li>
               <li data-target="#demo" data-slide-to="1"></li>
               <li data-target="#demo" data-slide-to="2"></li>
-            </ul>
+            </ol>
           
             <!-- The slideshow -->
             <div class="carousel-inner">
@@ -238,7 +238,7 @@ axios.get("https://newsapi.org/v2/top-headlines?category=health&apiKey=fdd83ae81
           
                 <!-- start -->
                 <div class="row">
-                ${newsSeg1.join('')}
+                ${newsSeg3.join('')}
 
             </div>
           
