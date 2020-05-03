@@ -2,14 +2,11 @@
 
 
  
-    var app = Sammy('body');
+    // var app = Sammy('body');
      
-    $(document).ready(function() {
+    // $(document).ready(function() {
 
         
-
-    app.run('SWE363-project#/home');
-
-
-    });
+    // app.run('#home');
+    // });
      
