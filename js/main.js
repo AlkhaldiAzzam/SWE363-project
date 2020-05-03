@@ -38,47 +38,63 @@ console.log(window.localStorage)
  
 	var app = Sammy.apps.body;
 	 
+
 	app.route(`${minorDomain}#home`, function(context) {
+
 		buildHomePage()
 	
 	});
 
+
 	app.route(`${minorDomain}#postquestion`, function(context) {
+
 		buildPostQuestionPage()
 	
 	});
 	 
    
+
 	app.route(`${minorDomain}#aboutus`, function(context) {
+
 		buildAboutUs()
 	});
 
+
 	app.route(`${minorDomain}#profile`, function(context) {
+
 		buildProfile()
 	});
 
 	
+
 	app.route(`${minorDomain}#questions`, function(context) {
+
 		buildQuestionsPage()
 	});
 
 
 	app.route(`${minorDomain}#dashboard`, function(context) {
+
 		buildDashboard()
 	});
 
 
 
+
 	app.route(`${minorDomain}#stafflist`, function(context) {
+
 		buildStaffList()
 	});
 
 
+
 	app.route(`${minorDomain}#covid-test`, function(context) {
+
 		buildQuizPage()
 	});
 
 	app.route(`${minorDomain}#questions/:id/comments`, function(context) {
+
 		buildQuestionsCommentsPage(context.params.id)
 
 		// let queryString = window.location.search;

@@ -59,7 +59,7 @@ export default function buildQuestionsPage(){
       <div class="container jumbotron">
       <div class="d-flex justify-content-between">
       <h1 >Questions <i class="fas fa-question"></i></h1>
-      <a href="/#/postquestion" class="btn btn-primary">Post</a>
+      <a href="SWE363-project/#/postquestion" class="btn btn-primary">Post</a>
 
       </div>
       <hr class="main-hr">
@@ -87,7 +87,7 @@ export default function buildQuestionsPage(){
 
         console.log(q)
 
-        window.location.href = domain + `#/questions/${q}/comments`
+        window.location.href = domain + `SWE363-project/#/questions/${q}/comments`
 
           
 

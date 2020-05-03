@@ -43,7 +43,7 @@ export default function buildLogin(){
                         Forgot
                     </span>
 
-                    <a href="#" class="txt2 hov1">
+                    <a  class="txt2 hov1">
                         Username / Password?
                     </a>
                 </div>
@@ -53,7 +53,7 @@ export default function buildLogin(){
                         Create an account?
                     </span>
 
-                    <a href="/#/signup" class="txt2 hov1" id="signup">
+                    <a href="SWE363-project/#/signup" class="txt2 hov1" id="signup">
                         Sign up
                     </a>
                 </div>
@@ -94,7 +94,7 @@ function login(data){
       
         userController(res.data)
         // buildHeader()
-        window.location.href = domain +"#/home"
+        window.location.href = domain +"SWE363-project/#/home"
         
     }).catch(err=> {
         $("#alert").removeClass("d-none")
