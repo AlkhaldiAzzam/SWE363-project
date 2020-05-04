@@ -48,7 +48,7 @@ export default function buildDashboard(){
                         <div class="card-body">
                           <h5 class="card-title">Your Questions</h5>
                           <p class="card-text">see your questions and check the answers for them</p>
-                          <button  class="btn btn-primary underCons">View</button>
+                          <a href="#myquestions/" class="btn btn-primary underCons">View</a>
                         </div>
                       </div>
                 </div>

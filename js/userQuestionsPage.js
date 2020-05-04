@@ -5,19 +5,23 @@ import { userController, domain } from "./main.js"
 let user = JSON.parse(window.localStorage.getItem('user'))
 
 
-export default function buildQuestionsPage(){
+export default function buildMyQuestionsPage(){
     $(".main").empty()
 
 
 
 
-    const url = "https://swe363-api.herokuapp.com/questions/"
+    const url = "https://swe363-api.herokuapp.com/questions/mine"
 
     let questions = []
 
     let jumpos = []
     
-    axios.get(url).then(res=>{
+    axios.get(url,{
+        'headers': {
+            'Authorization': JSON.parse(window.localStorage.getItem('user')).auth_token
+          }
+    }).then(res=>{
       questions = res.data
       // console.log(res.data)
       console.log(questions)
@@ -25,8 +29,7 @@ export default function buildQuestionsPage(){
       questions.reverse()
 
       let isAdmin = false
-      if (JSON.parse(window.localStorage.getItem('user')))
-      if (JSON.parse(window.localStorage.getItem('user')).user_data.user_type == "admin")
+      
         isAdmin = true
 
         // console.log(JSON.parse(window.localStorage.getItem('user')).user_data.user_type)
@@ -120,18 +123,6 @@ export default function buildQuestionsPage(){
 
 
 
-  //   for (let i = 0; i< 10; i++){
-  //     questions.push(`
-  //     <div>
-  //       <dt><h3>Question Title</h3></dt>
-  //       <br>
-  //       <dd><h5>Question Details</h5></dd>
-  //       <dd><h6>Question Date</h6></dd>
-  //       <button class="btn btn-primary">Read</button>
-  //       <hr class="hr-style-one">
-  //       </div>
-  // `)
-  //   }
 
 
     
