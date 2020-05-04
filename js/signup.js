@@ -68,7 +68,7 @@ export default function buildSignup(){
                       Already have an account?
                     </span>
 
-                    <a href="SWE363-project/#/login" class="txt2 hov1 " id="login">
+                    <a href="#login/" class="txt2 hov1 " id="login">
                         Login
                     </a>
                 </div>
