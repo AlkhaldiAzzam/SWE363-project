@@ -26,20 +26,7 @@ export default function buildDashboard(){
                       </div>
                 </div>
 
-                <div class="col-lg-4 col-md-6 col-sm-12">
-                    <div class="card" style="width: 18rem;">
-                        <div class="card-icon">
-                            <img src="./images/Search-Services.png" class="card-img-top" alt="Browse Available Services">
-                        </div>
-                        <div class="card-body">
-                          <h5 class="card-title">Browse Available Services</h5>
-                          <p class="card-text">Browse services and features helps to be more healthy.</p>
-                          <a href="#home/" class="btn btn-primary">Explore</a>
-
-                        </div>
-                      </div>
-                </div>
-                <div class="col-lg-4 col-md-6 col-sm-12">
+                <div class="col-lg-6 col-md-6 col-sm-12">
 
                     <div class="card" style="width: 18rem;">
                         <div class="card-icon">
@@ -53,7 +40,7 @@ export default function buildDashboard(){
                       </div>
                 </div>
 
-                <div class="col-lg-6 col-md-6 col-sm-12">
+                <div class="col-lg-12 col-md-12 col-sm-12">
                     <div class="card" style="width: 18rem;">
                         <div class="card-icon">
                             <img src="./images/1271366.svg" class="card-img-top" alt="Your Qeustions">
@@ -66,18 +53,6 @@ export default function buildDashboard(){
                       </div>
                 </div>
 
-                <div class="col-lg-6 col-md-6 col-sm-12">
-                    <div class="card" style="width: 18rem;">
-                        <div class="card-icon">
-                            <img src="./images/Feedback.svg" class="card-img-top" alt=" Send a feedback about the service">
-                        </div>
-                        <div class="card-body">
-                          <h5 class="card-title">Feedback</h5>
-                          <p class="card-text">Some quick feedback can be helpful for us to provide better serivces and high quality content.</p>
-                          <a href="#feedback/" class="btn btn-primary" id="feedbackBtn">Write feedback</a>
-                        </div>
-                      </div>
-                </div>
             </div>
         </div>
     </div>
