@@ -18,6 +18,7 @@ import buildPostQuestionPage from "./QuestionPostPage.js";
 import buildQuizPage from "./quiz_page.js";
 import buildQuestionsCommentsPage from "./questions_comments.js";
 import buildFeedbackPage from "./feedback_page.js";
+import buildMyQuestionsPage from "./userQuestionsPage.js";
 
 
 
@@ -68,6 +69,8 @@ function hashMeBaby() {
 			case hash == `${minorDomain}/#stafflist/` :	buildStaffList();
 			break;
 			case hash == `${minorDomain}/#feedback/` :	buildFeedbackPage();
+			break;
+			case hash == `${minorDomain}/#myquestions/` :	buildMyQuestionsPage();
 			break;
 
 			case hash == `${minorDomain}/#login/` :	buildLogin();
