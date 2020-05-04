@@ -120,7 +120,7 @@ export default function buildProfile(){
       window.localStorage.setItem('user', JSON.stringify(ouser))
 
       buildHeader()
-      window.location.href = domain + "#home/"
+      window.location.href = domain + "#profileupdated/"
 
 
     }).catch(err=>console.log(err))

@@ -61,7 +61,7 @@ export default function buildDashboard(){
             <div class="card-body">
               <h5 class="card-title">Your Feedback is Important for us</h5>
               <p class="card-text">Any complaints, suggestions for improvement ,or any feedback you will provide will be helpful and appreciated</p>
-              <button  class="btn btn-primary underCons">Write</button>
+              <a href="#feedback/" class="btn btn-primary ">Write</a>
             </div>
           </div>
     </div>
@@ -73,7 +73,7 @@ export default function buildDashboard(){
 
     // $("#pro-page").click(()=> buildProfile())
     // $("#feedbackBtn").click(()=> buildFeedbackPage())
-    $(".underCons").click(()=> buildPageUnderCons())
+    // $(".underCons").click(()=> buildPageUnderCons())
     // $("#PostQuestionBtn").click(()=> buildPostQuestionPage())
 
 }

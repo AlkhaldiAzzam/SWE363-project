@@ -1,10 +1,11 @@
+import { domain } from "./main.js";
 
 
 export default function buildProfileUpdatedPage(){
 
-    $('#main').empty();
+    $('.main').empty();
 
-    $('#main').append(`
+    $('.main').append(`
     
     
     <div class="container">
@@ -40,6 +41,8 @@ export default function buildProfileUpdatedPage(){
     
     `);
 
-
+    setTimeout(function(){
+      window.location.href = domain + "#profile/";
+   }, 3000);
 
 }

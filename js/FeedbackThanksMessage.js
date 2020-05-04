@@ -1,3 +1,5 @@
+import { domain } from "./main.js";
+
 export default function buildFeedbackThanksMessage(){
     
     $(".main").empty();
@@ -40,4 +42,9 @@ export default function buildFeedbackThanksMessage(){
 
     
     `)
+
+
+    setTimeout(function(){
+      window.location.href = domain + "#home/";
+   }, 3000);
 }
