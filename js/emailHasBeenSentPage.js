@@ -1,7 +1,7 @@
 export default function buildEmailHasBeenSentPage(){
-    $('#main').empty();
+    $('.main').empty();
 
-    $('#main').append(`
+    $('.main').append(`
     
     <div class="container">
     
