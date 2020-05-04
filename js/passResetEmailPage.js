@@ -49,7 +49,7 @@ export default function buildPassResetEmailPage(){
 
         axios.post(url, data).then(res=>{
             console.log(res)
-            window.location.href = domain + "#home/"
+            window.location.href = domain + "#emailsent/"
         }).catch(err=>console.log(err))
 
 

@@ -37,6 +37,7 @@ export default function buildFeedbackPage(){
     
               </div>
     
+              
               <input id="subBtn" class="btn btn-primary" type="submit" value="Submit">
               
             </form>
@@ -55,7 +56,7 @@ export default function buildFeedbackPage(){
     </div>`)
 
   $("#subBtn").click(()=>{
-    window.location.href = domain + "#home/"
+    window.location.href = domain + "#feedback/thanks/"
   })
 
 

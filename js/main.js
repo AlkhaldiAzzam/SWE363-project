@@ -19,6 +19,9 @@ import buildQuizPage from "./quiz_page.js";
 import buildQuestionsCommentsPage from "./questions_comments.js";
 import buildFeedbackPage from "./feedback_page.js";
 import buildMyQuestionsPage from "./userQuestionsPage.js";
+import buildFeedbackThanksMessage from "./FeedbackThanksMessage.js";
+import buildEmailHasBeenSentPage from "./emailHasBeenSentPage.js";
+import buildProfileUpdatedPage from "./ProfileUpdatedPage.js";
 
 
 
@@ -71,6 +74,14 @@ function hashMeBaby() {
 			case hash == `${minorDomain}/#feedback/` :	buildFeedbackPage();
 			break;
 			case hash == `${minorDomain}/#myquestions/` :	buildMyQuestionsPage();
+			break;
+			case hash == `${minorDomain}/#feedback/thanks/` :	buildFeedbackThanksMessage();
+			break;
+
+			case hash == `${minorDomain}/#emailsent/` :	buildEmailHasBeenSentPage();
+			break;
+
+			case hash == `${minorDomain}/#profileupdated/` :	buildProfileUpdatedPage();
 			break;
 
 			case hash == `${minorDomain}/#login/` :	buildLogin();
