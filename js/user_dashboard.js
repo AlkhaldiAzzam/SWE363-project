@@ -53,6 +53,19 @@ export default function buildDashboard(){
                       </div>
                 </div>
 
+                <div class="col-lg-12 col-md-12 col-sm-12">
+        <div class="card" style="width: 18rem;">
+            <div class="card-icon">
+                <img src="./images/Feedback.svg" class="card-img-top" alt="Feedback">
+            </div>
+            <div class="card-body">
+              <h5 class="card-title">Your Feedback is Important for us</h5>
+              <p class="card-text">Any complaints, suggestions for improvement ,or any feedback you will provide will be helpful and appreciated</p>
+              <button  class="btn btn-primary underCons">Write !</button>
+            </div>
+          </div>
+    </div>
+
             </div>
         </div>
     </div>
