@@ -10,7 +10,7 @@ export default function buildFooter() {
             <i class="fas fa-user"></i> Azzam Alkhaldi
             </div>
             <div>
-            <i class="fas fa-female"></i> Khalid Alghamdi
+            <i class="fas fa-user"></i> Khalid Alghamdi
             </div>
             <div>
             <i class="fas fa-user"></i> Ahmed AlZahrani
