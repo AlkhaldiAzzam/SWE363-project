@@ -13,7 +13,7 @@ export default function buildDashboard(){
     <div class="container">
         <div class="jumbotron">
             <div class="row">
-                <div class="col-lg-6 col-md-6 col-sm-12">
+                <div class="col-lg-6 col-md-12 col-sm-12">
                     <div class="card" style="width: 18rem;">
                         <div class="card-icon">
                             <img src="./images/Update-Profile.png" class="card-img-top" alt="Update Profile">
@@ -26,7 +26,7 @@ export default function buildDashboard(){
                       </div>
                 </div>
 
-                <div class="col-lg-6 col-md-6 col-sm-12">
+                <div class="col-lg-6 col-md-12 col-sm-12">
 
                     <div class="card" style="width: 18rem;">
                         <div class="card-icon">
@@ -40,7 +40,7 @@ export default function buildDashboard(){
                       </div>
                 </div>
 
-                <div class="col-lg-12 col-md-12 col-sm-12">
+                <div class="col-lg-6 col-md-12 col-sm-12">
                     <div class="card" style="width: 18rem;">
                         <div class="card-icon">
                             <img src="./images/1271366.svg" class="card-img-top" alt="Your Qeustions">
